@@ -57,7 +57,7 @@ class __TwigTemplate_46b7bc6065987fdc54cfeacedf43ae34 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello ListarBibliotecasController!";
+        yield "Listar Bibliotecas";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -72,23 +72,39 @@ class __TwigTemplate_46b7bc6065987fdc54cfeacedf43ae34 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        yield "    <h1>Listar Bibliotecas</h1>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        yield Twig\Extension\EscaperExtension::escape($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        yield "! ✅</h1>
-
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/src/Controller/ListarBibliotecasController.php</code></li>
-        <li>Your template at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/templates/listar_bibliotecas/index.html.twig</code></li>
-    </ul>
-</div>
+        ";
+        // line 9
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["bibliotecas"]) || array_key_exists("bibliotecas", $context) ? $context["bibliotecas"] : (function () { throw new RuntimeError('Variable "bibliotecas" does not exist.', 9, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["biblioteca"]) {
+            // line 10
+            yield "            <li>
+                <h2>";
+            // line 11
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["biblioteca"], "nombre", [], "any", false, false, false, 11), "html", null, true);
+            yield "</h2>
+                <p>";
+            // line 12
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["biblioteca"], "direccion", [], "any", false, false, false, 12), "html", null, true);
+            yield "</p>
+            </li>
+        ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 15
+            yield "            <li>No hay bibliotecas disponibles.</li>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['biblioteca'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 17
+        yield "    </ul>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -117,30 +133,28 @@ class __TwigTemplate_46b7bc6065987fdc54cfeacedf43ae34 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  83 => 12,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  107 => 17,  100 => 15,  92 => 12,  88 => 11,  85 => 10,  80 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello ListarBibliotecasController!{% endblock %}
+{% block title %}Listar Bibliotecas{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Listar Bibliotecas</h1>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/src/Controller/ListarBibliotecasController.php</code></li>
-        <li>Your template at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/templates/listar_bibliotecas/index.html.twig</code></li>
+        {% for biblioteca in bibliotecas %}
+            <li>
+                <h2>{{ biblioteca.nombre }}</h2>
+                <p>{{ biblioteca.direccion }}</p>
+            </li>
+        {% else %}
+            <li>No hay bibliotecas disponibles.</li>
+        {% endfor %}
     </ul>
-</div>
 {% endblock %}
 ", "listar_bibliotecas/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/listar_bibliotecas/index.html.twig");
     }

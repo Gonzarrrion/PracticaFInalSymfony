@@ -42,18 +42,18 @@ class Biblioteca
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $normasName;
+ /*   private $normasName;
 
     /**
      * @Vich\UploadableField(mapping="normas", fileNameProperty="normasName")
      * @var File|null
      */
-    private $normasFile;
+/*    private $normasFile;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $updatedAt;
+/*    private $updatedAt;*/
 
     public function getId(): ?int
     {
@@ -131,7 +131,7 @@ class Biblioteca
 
         return $this;
     }
-
+/*
     public function getNormasName(): ?string
     {
         return $this->normasName;
@@ -169,5 +169,5 @@ class Biblioteca
 
         return $this;
     }
-
+*/
 }
