@@ -166,6 +166,6 @@ class __TwigTemplate_a1eff5b2a7c58a321fe31d5240f81869 extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/templates/base.html.twig");
+", "base.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/base.html.twig");
     }
 }
