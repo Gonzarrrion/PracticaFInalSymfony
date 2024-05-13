@@ -57,7 +57,7 @@ class __TwigTemplate_1b7be696a0228b54b7ba710aeb876497 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello BuscarLibroTituloBiliotecaController!";
+        yield "Buscar Libro por Título y Biblioteca";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -72,23 +72,68 @@ class __TwigTemplate_1b7be696a0228b54b7ba710aeb876497 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        yield "    <h1>Buscar Libro por Título y Biblioteca</h1>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        yield Twig\Extension\EscaperExtension::escape($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        yield "! ✅</h1>
+    <form action=\"";
+        // line 8
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_titulo_biblioteca");
+        yield "\" method=\"get\">
+        <label for=\"titulo\">Título:</label>
+        <input type=\"text\" id=\"titulo\" name=\"titulo\" required>
+        <label for=\"biblioteca\">Biblioteca:</label>
+        <select id=\"biblioteca\" name=\"biblioteca\">
+            ";
+        // line 13
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["bibliotecas"]) || array_key_exists("bibliotecas", $context) ? $context["bibliotecas"] : (function () { throw new RuntimeError('Variable "bibliotecas" does not exist.', 13, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["biblioteca"]) {
+            // line 14
+            yield "                <option value=\"";
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["biblioteca"], "id", [], "any", false, false, false, 14), "html", null, true);
+            yield "\">";
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["biblioteca"], "nombre", [], "any", false, false, false, 14), "html", null, true);
+            yield "</option>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['biblioteca'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 16
+        yield "        </select>
+        <button type=\"submit\">Buscar</button>
+    </form>
 
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/src/Controller/BuscarLibroTituloBiliotecaController.php</code></li>
-        <li>Your template at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/templates/buscar_libro_titulo_bilioteca/index.html.twig</code></li>
-    </ul>
-</div>
+        ";
+        // line 21
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["libros"]) || array_key_exists("libros", $context) ? $context["libros"] : (function () { throw new RuntimeError('Variable "libros" does not exist.', 21, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["libro"]) {
+            // line 22
+            yield "            <li>
+                <h2>";
+            // line 23
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "titulo", [], "any", false, false, false, 23), "html", null, true);
+            yield "</h2>
+                <p>";
+            // line 24
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "autor", [], "any", false, false, false, 24), "html", null, true);
+            yield "</p>
+            </li>
+        ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 27
+            yield "            <li>No hay libros disponibles.</li>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['libro'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 29
+        yield "    </ul>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -117,31 +162,40 @@ class __TwigTemplate_1b7be696a0228b54b7ba710aeb876497 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  83 => 12,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  136 => 29,  129 => 27,  121 => 24,  117 => 23,  114 => 22,  109 => 21,  102 => 16,  91 => 14,  87 => 13,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello BuscarLibroTituloBiliotecaController!{% endblock %}
+{% block title %}Buscar Libro por Título y Biblioteca{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Buscar Libro por Título y Biblioteca</h1>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <form action=\"{{ path('buscar_libro_titulo_biblioteca') }}\" method=\"get\">
+        <label for=\"titulo\">Título:</label>
+        <input type=\"text\" id=\"titulo\" name=\"titulo\" required>
+        <label for=\"biblioteca\">Biblioteca:</label>
+        <select id=\"biblioteca\" name=\"biblioteca\">
+            {% for biblioteca in bibliotecas %}
+                <option value=\"{{ biblioteca.id }}\">{{ biblioteca.nombre }}</option>
+            {% endfor %}
+        </select>
+        <button type=\"submit\">Buscar</button>
+    </form>
 
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/src/Controller/BuscarLibroTituloBiliotecaController.php</code></li>
-        <li>Your template at <code>/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/templates/buscar_libro_titulo_bilioteca/index.html.twig</code></li>
+        {% for libro in libros %}
+            <li>
+                <h2>{{ libro.titulo }}</h2>
+                <p>{{ libro.autor }}</p>
+            </li>
+        {% else %}
+            <li>No hay libros disponibles.</li>
+        {% endfor %}
     </ul>
-</div>
-{% endblock %}
-", "buscar_libro_titulo_bilioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_bilioteca/index.html.twig");
+{% endblock %}", "buscar_libro_titulo_bilioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_bilioteca/index.html.twig");
     }
 }

@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\Biblioteca;
 use Doctrine\ORM\EntityManagerInterface;
 
+use App\Entity\Libro;
 
 class ListarBibliotecasController extends AbstractController
 {
@@ -18,7 +19,6 @@ class ListarBibliotecasController extends AbstractController
         $this->em = $em;
     }
     
-    // Este controlador me permite listar las bibliotecas que hay en la base de datos
     #[Route('/listar/bibliotecas', name: 'app_listar_bibliotecas')]
     public function index(): Response
     {   
