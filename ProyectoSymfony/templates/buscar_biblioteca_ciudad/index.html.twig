@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title} Buscar Biblioteca por Ciudad {% endblock %}
+{% block title %} Buscar Biblioteca por Ciudad {% endblock %}
 
 {% block body %}
     <h1>Buscar Biblioteca por Ciudad</h1>
@@ -16,9 +16,10 @@
             <li>
                 <h2>{{ biblioteca.nombre }}</h2>
                 <p>{{ biblioteca.direccion }}</p>
+                <p>{{ biblioteca.ciudad }}</p>
             </li>
         {% else %}
             <li>No hay bibliotecas disponibles.</li>
         {% endfor %}
     </ul>
-{% endblock %
+{% endblock %}
