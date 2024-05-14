@@ -11,7 +11,9 @@
             {% endfor %}
         </select>
         <button type="submit">Buscar</button>
-    <h1>Listar Libros de la Biblioteca</h1>
+    </form>
+
+    <h1>Listar Libros de la {{biblioteca.nombre}}</h1>
 
     <ul>
         {% for libro in libros %}

@@ -104,19 +104,23 @@ class __TwigTemplate_504a82c8f58be70785ec5f3e5cfee72c extends Template
             // line 19
             yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "biblioteca", [], "any", false, false, false, 19), "nombre", [], "any", false, false, false, 19), "html", null, true);
             yield "</p>
+                <p>";
+            // line 20
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "isbn", [], "any", false, false, false, 20), "html", null, true);
+            yield "</p>
             </li>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 22
+            // line 23
             yield "            <li>No hay libros disponibles.</li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['libro'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 25
         yield "    </ul>
 ";
         
@@ -146,7 +150,7 @@ class __TwigTemplate_504a82c8f58be70785ec5f3e5cfee72c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  120 => 24,  113 => 22,  105 => 19,  101 => 18,  97 => 17,  94 => 16,  89 => 15,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  124 => 25,  117 => 23,  109 => 20,  105 => 19,  101 => 18,  97 => 17,  94 => 16,  89 => 15,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -170,6 +174,7 @@ class __TwigTemplate_504a82c8f58be70785ec5f3e5cfee72c extends Template
                 <h2>{{ libro.titulo }}</h2>
                 <p>{{ libro.autor }}</p>
                 <p>{{ libro.biblioteca.nombre }}</p>
+                <p>{{ libro.isbn }}</p>
             </li>
         {% else %}
             <li>No hay libros disponibles.</li>

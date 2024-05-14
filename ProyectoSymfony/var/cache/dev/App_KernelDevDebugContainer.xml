@@ -186,44 +186,44 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
-    <service id="App\Controller\BuscarBiliotecaCiudadController" class="App\Controller\BuscarBiliotecaCiudadController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarBiliotecaCiudadController"/>
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarBibliotecaCiudadController"/>
       </call>
     </service>
-    <service id="App\Controller\BuscarBiliotecaNombreController" class="App\Controller\BuscarBiliotecaNombreController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\BuscarBibliotecaNombreController" class="App\Controller\BuscarBibliotecaNombreController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarBiliotecaNombreController"/>
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarBibliotecaNombreController"/>
       </call>
     </service>
-    <service id="App\Controller\BuscarLibroAutorBiliotecaController" class="App\Controller\BuscarLibroAutorBiliotecaController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\BuscarLibroAutorBibliotecaController" class="App\Controller\BuscarLibroAutorBibliotecaController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroAutorBiliotecaController"/>
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroAutorBibliotecaController"/>
       </call>
     </service>
-    <service id="App\Controller\BuscarLibroEditorialBiliotecaController" class="App\Controller\BuscarLibroEditorialBiliotecaController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\BuscarLibroEditorialBibliotecaController" class="App\Controller\BuscarLibroEditorialBibliotecaController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroEditorialBiliotecaController"/>
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroEditorialBibliotecaController"/>
       </call>
     </service>
-    <service id="App\Controller\BuscarLibroTituloBiliotecaController" class="App\Controller\BuscarLibroTituloBiliotecaController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\BuscarLibroTituloBibliotecaController" class="App\Controller\BuscarLibroTituloBibliotecaController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloBiliotecaController"/>
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloBibliotecaController"/>
       </call>
     </service>
     <service id="App\Controller\BuscarLibroTituloController" class="App\Controller\BuscarLibroTituloController" public="true" autowire="true" autoconfigure="true">
@@ -250,12 +250,12 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\ListarBibliotecasController"/>
       </call>
     </service>
-    <service id="App\Controller\ListarLibrosBiliotecaController" class="App\Controller\ListarLibrosBiliotecaController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\ListarLibrosBibliotecaController" class="App\Controller\ListarLibrosBibliotecaController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\ListarLibrosBiliotecaController"/>
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\ListarLibrosBibliotecaController"/>
       </call>
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
@@ -3273,21 +3273,21 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarBiliotecaCiudadController" class="App\Controller\BuscarBiliotecaCiudadController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarBiliotecaCiudadController" class="App\Controller\BuscarBiliotecaCiudadController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\BuscarBiliotecaCiudadController" class="App\Controller\BuscarBiliotecaCiudadController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarBiliotecaNombreController" class="App\Controller\BuscarBiliotecaNombreController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarBiliotecaNombreController" class="App\Controller\BuscarBiliotecaNombreController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\BuscarBiliotecaNombreController" class="App\Controller\BuscarBiliotecaNombreController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroAutorBiliotecaController" class="App\Controller\BuscarLibroAutorBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroAutorBiliotecaController" class="App\Controller\BuscarLibroAutorBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\BuscarLibroAutorBiliotecaController" class="App\Controller\BuscarLibroAutorBiliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroEditorialBiliotecaController" class="App\Controller\BuscarLibroEditorialBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroEditorialBiliotecaController" class="App\Controller\BuscarLibroEditorialBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\BuscarLibroEditorialBiliotecaController" class="App\Controller\BuscarLibroEditorialBiliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroTituloBiliotecaController" class="App\Controller\BuscarLibroTituloBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroTituloBiliotecaController" class="App\Controller\BuscarLibroTituloBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\BuscarLibroTituloBiliotecaController" class="App\Controller\BuscarLibroTituloBiliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarBibliotecaNombreController" class="App\Controller\BuscarBibliotecaNombreController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarBibliotecaNombreController" class="App\Controller\BuscarBibliotecaNombreController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BuscarBibliotecaNombreController" class="App\Controller\BuscarBibliotecaNombreController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroAutorBibliotecaController" class="App\Controller\BuscarLibroAutorBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroAutorBibliotecaController" class="App\Controller\BuscarLibroAutorBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BuscarLibroAutorBibliotecaController" class="App\Controller\BuscarLibroAutorBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroEditorialBibliotecaController" class="App\Controller\BuscarLibroEditorialBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroEditorialBibliotecaController" class="App\Controller\BuscarLibroEditorialBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BuscarLibroEditorialBibliotecaController" class="App\Controller\BuscarLibroEditorialBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroTituloBibliotecaController" class="App\Controller\BuscarLibroTituloBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroTituloBibliotecaController" class="App\Controller\BuscarLibroTituloBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BuscarLibroTituloBibliotecaController" class="App\Controller\BuscarLibroTituloBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroTituloController" class="App\Controller\BuscarLibroTituloController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroTituloController" class="App\Controller\BuscarLibroTituloController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BuscarLibroTituloController" class="App\Controller\BuscarLibroTituloController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3297,9 +3297,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ListarLibrosBiliotecaController" class="App\Controller\ListarLibrosBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ListarLibrosBiliotecaController" class="App\Controller\ListarLibrosBiliotecaController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ListarLibrosBiliotecaController" class="App\Controller\ListarLibrosBiliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ListarLibrosBibliotecaController" class="App\Controller\ListarLibrosBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ListarLibrosBibliotecaController" class="App\Controller\ListarLibrosBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ListarLibrosBibliotecaController" class="App\Controller\ListarLibrosBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarBibliotecaCiudadFormType" class="App\Form\BuscarBibliotecaCiudadFormType" autowire="true" abstract="true"/>
@@ -3895,33 +3895,33 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\BuscarBiliotecaCiudadController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\BuscarBiliotecaCiudadController"/>
-      <argument>App\Controller\BuscarBiliotecaCiudadController</argument>
+    <service id=".service_locator.jUv.zyj.App\Controller\BuscarBibliotecaCiudadController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\BuscarBibliotecaCiudadController"/>
+      <argument>App\Controller\BuscarBibliotecaCiudadController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\BuscarBiliotecaNombreController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\BuscarBiliotecaNombreController"/>
-      <argument>App\Controller\BuscarBiliotecaNombreController</argument>
+    <service id=".service_locator.jUv.zyj.App\Controller\BuscarBibliotecaNombreController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\BuscarBibliotecaNombreController"/>
+      <argument>App\Controller\BuscarBibliotecaNombreController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroAutorBiliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\BuscarLibroAutorBiliotecaController"/>
-      <argument>App\Controller\BuscarLibroAutorBiliotecaController</argument>
+    <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroAutorBibliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\BuscarLibroAutorBibliotecaController"/>
+      <argument>App\Controller\BuscarLibroAutorBibliotecaController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroEditorialBiliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\BuscarLibroEditorialBiliotecaController"/>
-      <argument>App\Controller\BuscarLibroEditorialBiliotecaController</argument>
+    <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroEditorialBibliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\BuscarLibroEditorialBibliotecaController"/>
+      <argument>App\Controller\BuscarLibroEditorialBibliotecaController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloBiliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\BuscarLibroTituloBiliotecaController"/>
-      <argument>App\Controller\BuscarLibroTituloBiliotecaController</argument>
+    <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloBibliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\BuscarLibroTituloBibliotecaController"/>
+      <argument>App\Controller\BuscarLibroTituloBibliotecaController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
@@ -3943,9 +3943,9 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\ListarLibrosBiliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\ListarLibrosBiliotecaController"/>
-      <argument>App\Controller\ListarLibrosBiliotecaController</argument>
+    <service id=".service_locator.jUv.zyj.App\Controller\ListarLibrosBibliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ListarLibrosBibliotecaController"/>
+      <argument>App\Controller\ListarLibrosBibliotecaController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
@@ -4050,15 +4050,15 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>App\Kernel</argument>
-          <argument>App\Controller\BuscarBiliotecaCiudadController</argument>
-          <argument>App\Controller\BuscarBiliotecaNombreController</argument>
-          <argument>App\Controller\BuscarLibroAutorBiliotecaController</argument>
-          <argument>App\Controller\BuscarLibroEditorialBiliotecaController</argument>
-          <argument>App\Controller\BuscarLibroTituloBiliotecaController</argument>
+          <argument>App\Controller\BuscarBibliotecaCiudadController</argument>
+          <argument>App\Controller\BuscarBibliotecaNombreController</argument>
+          <argument>App\Controller\BuscarLibroAutorBibliotecaController</argument>
+          <argument>App\Controller\BuscarLibroEditorialBibliotecaController</argument>
+          <argument>App\Controller\BuscarLibroTituloBibliotecaController</argument>
           <argument>App\Controller\BuscarLibroTituloController</argument>
           <argument>App\Controller\BuscarLibroTituloDisponibilidadController</argument>
           <argument>App\Controller\ListarBibliotecasController</argument>
-          <argument>App\Controller\ListarLibrosBiliotecaController</argument>
+          <argument>App\Controller\ListarLibrosBibliotecaController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
       </call>

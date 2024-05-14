@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Buscar Biblioteca por Nombre {% endblock %}
+
+{% block body %}
+    <h1>Buscar Biblioteca por Nombre</h1>
+
+    <form action="{{ path('buscar_biblioteca_nombre') }}" method="get">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+        {% for biblioteca in bibliotecas %}
+            <li>
+                <h2>{{ biblioteca.nombre }}</h2>
+                <p>{{ biblioteca.direccion }}</p>
+            </li>
+        {% else %}
+            <li>No hay bibliotecas disponibles.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

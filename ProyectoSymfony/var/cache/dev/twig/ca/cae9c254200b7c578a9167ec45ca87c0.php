@@ -96,38 +96,43 @@ class __TwigTemplate_79237ec7b7d417d2f898d9377f688a29 extends Template
         // line 12
         yield "        </select>
         <button type=\"submit\">Buscar</button>
-    <h1>Listar Libros de la Biblioteca</h1>
+    </form>
+
+    <h1>Listar Libros de la ";
+        // line 16
+        yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, (isset($context["biblioteca"]) || array_key_exists("biblioteca", $context) ? $context["biblioteca"] : (function () { throw new RuntimeError('Variable "biblioteca" does not exist.', 16, $this->source); })()), "nombre", [], "any", false, false, false, 16), "html", null, true);
+        yield "</h1>
 
     <ul>
         ";
-        // line 17
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["libros"]) || array_key_exists("libros", $context) ? $context["libros"] : (function () { throw new RuntimeError('Variable "libros" does not exist.', 17, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["libros"]) || array_key_exists("libros", $context) ? $context["libros"] : (function () { throw new RuntimeError('Variable "libros" does not exist.', 19, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["libro"]) {
-            // line 18
+            // line 20
             yield "            <li>
                 <h2>";
-            // line 19
-            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "titulo", [], "any", false, false, false, 19), "html", null, true);
+            // line 21
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "titulo", [], "any", false, false, false, 21), "html", null, true);
             yield "</h2>
                 <p>";
-            // line 20
-            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "autor", [], "any", false, false, false, 20), "html", null, true);
+            // line 22
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "autor", [], "any", false, false, false, 22), "html", null, true);
             yield "</p>
             </li>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 23
+            // line 25
             yield "            <li>No hay libros disponibles.</li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['libro'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 25
+        // line 27
         yield "    </ul>
 ";
         
@@ -157,7 +162,7 @@ class __TwigTemplate_79237ec7b7d417d2f898d9377f688a29 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  131 => 25,  124 => 23,  116 => 20,  112 => 19,  109 => 18,  104 => 17,  97 => 12,  86 => 10,  82 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  136 => 27,  129 => 25,  121 => 22,  117 => 21,  114 => 20,  109 => 19,  103 => 16,  97 => 12,  86 => 10,  82 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -175,7 +180,9 @@ class __TwigTemplate_79237ec7b7d417d2f898d9377f688a29 extends Template
             {% endfor %}
         </select>
         <button type=\"submit\">Buscar</button>
-    <h1>Listar Libros de la Biblioteca</h1>
+    </form>
+
+    <h1>Listar Libros de la {{biblioteca.nombre}}</h1>
 
     <ul>
         {% for libro in libros %}
