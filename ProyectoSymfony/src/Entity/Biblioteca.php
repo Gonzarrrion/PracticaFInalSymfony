@@ -20,24 +20,24 @@ class Biblioteca
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Nombre = null;
+    private ?string $nombre = null;
 
     #[ORM\Column(type: Types::TEXT)]
     // Constraint que obliga a que el texto contenga un numero al final
     #[Assert\Regex(pattern: '/\d/', message: 'El texto debe contener un número')]
-    private ?string $Direccion = null;
+    private ?string $direccion = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Ciudad = null;
+    private ?string $ciudad = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
-    private ?\DateTimeInterface $HorarioApertura = null;
+    private ?\DateTimeInterface $horario_apertura = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
-    private ?\DateTimeInterface $HorarioCierre = null;
+    private ?\DateTimeInterface $horario_cierre = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $FechaFundacion = null;
+    private ?\DateTimeInterface $fecha_fundacion = null;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -62,72 +62,72 @@ class Biblioteca
 
     public function getNombre(): ?string
     {
-        return $this->Nombre;
+        return $this->nombre;
     }
 
-    public function setNombre(string $Nombre): static
+    public function setNombre(string $nombre): static
     {
-        $this->Nombre = $Nombre;
+        $this->nombre = $nombre;
 
         return $this;
     }
 
     public function getDireccion(): ?string
     {
-        return $this->Direccion;
+        return $this->direccion;
     }
 
-    public function setDireccion(string $Direccion): static
+    public function setDireccion(string $direccion): static
     {
-        $this->Direccion = $Direccion;
+        $this->direccion = $direccion;
 
         return $this;
     }
 
     public function getCiudad(): ?string
     {
-        return $this->Ciudad;
+        return $this->ciudad;
     }
 
-    public function setCiudad(string $Ciudad): static
+    public function setCiudad(string $ciudad): static
     {
-        $this->Ciudad = $Ciudad;
+        $this->ciudad = $ciudad;
 
         return $this;
     }
 
     public function getHorarioApertura(): ?\DateTimeInterface
     {
-        return $this->HorarioApertura;
+        return $this->horario_apertura;
     }
 
-    public function setHorarioApertura(\DateTimeInterface $HorarioApertura): static
+    public function setHorarioApertura(\DateTimeInterface $horario_apertura): static
     {
-        $this->HorarioApertura = $HorarioApertura;
+        $this->horario_apertura = $horario_apertura;
 
         return $this;
     }
 
     public function getHorarioCierre(): ?\DateTimeInterface
     {
-        return $this->HorarioCierre;
+        return $this->horario_cierre;
     }
 
-    public function setHorarioCierre(\DateTimeInterface $HorarioCierre): static
+    public function setHorarioCierre(\DateTimeInterface $horario_cierre): static
     {
-        $this->HorarioCierre = $HorarioCierre;
+        $this->horario_cierre = $horario_cierre;
 
         return $this;
     }
 
     public function getFechaFundacion(): ?\DateTimeInterface
     {
-        return $this->FechaFundacion;
+        return $this->fecha_fundacion;
     }
 
-    public function setFechaFundacion(\DateTimeInterface $FechaFundacion): static
+    public function setFechaFundacion(\DateTimeInterface $fecha_fundacion): static
     {
-        $this->FechaFundacion = $FechaFundacion;
+        $this->fecha_fundacion = $fecha_fundacion;
 
         return $this;
     }

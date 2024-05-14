@@ -16,7 +16,7 @@ return [
         '/buscar/libro/titulo' => [[['_route' => 'app_buscar_libro_titulo', '_controller' => 'App\\Controller\\BuscarLibroTituloController::index'], null, null, null, false, false, null]],
         '/buscar/libro/titulo/disponibilidad' => [[['_route' => 'app_buscar_libro_titulo_disponibilidad', '_controller' => 'App\\Controller\\BuscarLibroTituloDisponibilidadController::index'], null, null, null, false, false, null]],
         '/listar/bibliotecas' => [[['_route' => 'app_listar_bibliotecas', '_controller' => 'App\\Controller\\ListarBibliotecasController::index'], null, null, null, false, false, null]],
-        '/listar/libros/bilioteca' => [[['_route' => 'app_listar_libros_bilioteca', '_controller' => 'App\\Controller\\ListarLibrosBiliotecaController::index'], null, null, null, false, false, null]],
+        '/listar/libros/biblioteca' => [[['_route' => 'app_listar_libros_bilioteca', '_controller' => 'App\\Controller\\ListarLibrosBiliotecaController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

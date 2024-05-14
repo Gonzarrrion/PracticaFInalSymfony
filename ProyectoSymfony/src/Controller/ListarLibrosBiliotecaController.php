@@ -3,13 +3,14 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Biblioteca;
 use App\Entity\Libro;
 
-class ListarLibrosBiliotecaController extends AbstractController
+class ListarLibrosBibliotecaController extends AbstractController
 {
     private $em;
 
@@ -18,20 +19,27 @@ class ListarLibrosBiliotecaController extends AbstractController
         $this->em = $em;
     }
 
-    #[Route('/listar/libros/bilioteca', name: 'app_listar_libros_bilioteca')]
-    public function index(): Response
+    #[Route('/listar/libros/biblioteca', name: 'app_listar_libros_biblioteca')]
+    public function index(Request $request): Response
     {
         // Obtenemos el repositorio de la entidad Biblioteca y Libro
         $repositoryBiblioteca = $this->em->getRepository(Biblioteca::class);
         $repositoryLibro = $this->em->getRepository(Libro::class);
 
-        // Obtenemos todos los libros de la biblioteca con id 1
-        $biblioteca = $repositoryBiblioteca->find(1);
-        $libros = $repositoryLibro->findBy(['biblioteca' => $biblioteca]);
+        // Obtenemos todas las bibliotecas
+        $bibliotecas = $repositoryBiblioteca->findAll();
 
-        // Renderizamos la vista y le pasamos los libros
+        // Obtenemos la biblioteca seleccionada por el usuario
+        $bibliotecaId = $request->query->get('biblioteca');
+        $biblioteca = $repositoryBiblioteca->find($bibliotecaId);
+
+        // Obtenemos todos los libros de la biblioteca seleccionada
+        $libros = $repositoryLibro->findBy(['Biblioteca' => $biblioteca]);
+
+        // Renderizamos la vista y le pasamos los libros y las bibliotecas
         return $this->render('listar_libros_biblioteca/index.html.twig', [
             'libros' => $libros,
+            'bibliotecas' => $bibliotecas,
         ]);
     }
 }

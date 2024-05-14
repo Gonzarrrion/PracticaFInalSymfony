@@ -12,34 +12,34 @@ class Libro
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: "integer")]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $Titulo = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $Autor = null;
-
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Sinopsis = null;
-
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $AnoPublicacion = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $Editorial = null;
-
-    #[ORM\Column(length: 255)]
-    #[Assert\Regex("/^[0-9]{1,5}([- ]?[0-9]+)*$/")]
-    private ?string $ISBN = null;
-
-    #[ORM\Column(type: Types::INTEGER)]
-    private ?int $NumEjemplares = null;
-
     #[ORM\ManyToOne(targetEntity: Biblioteca::class)]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "biblioteca_id", referencedColumnName: "id", nullable: false)]
     private ?Biblioteca $Biblioteca = null;
+
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $titulo = null;
+
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $autor = null;
+
+    #[ORM\Column(type: "text", nullable: true)]
+    private ?string $sinopsis = null;
+
+    #[ORM\Column(type: "date")]
+    private ?\DateTimeInterface $anoPublicacion = null;
+
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $editorial = null;
+
+    #[ORM\Column(type: "string", length: 255)]
+    #[Assert\Regex("/^[0-9]{1,5}([- ]?[0-9]+)*$/")]
+    private ?string $isbn = null;
+
+    #[ORM\Column(type: "integer")]
+    private ?int $numEjemplares = null;
 
     public function getId(): ?int
     {
@@ -48,84 +48,84 @@ class Libro
 
     public function getTitulo(): ?string
     {
-        return $this->Titulo;
+        return $this->titulo;
     }
 
-    public function setTitulo(string $Titulo): static
+    public function setTitulo(string $titulo): static
     {
-        $this->Titulo = $Titulo;
+        $this->titulo = $titulo;
 
         return $this;
     }
 
     public function getAutor(): ?string
     {
-        return $this->Autor;
+        return $this->autor;
     }
 
-    public function setAutor(string $Autor): static
+    public function setAutor(string $autor): static
     {
-        $this->Autor = $Autor;
+        $this->autor = $autor;
 
         return $this;
     }
 
     public function getSinopsis(): ?string
     {
-        return $this->Sinopsis;
+        return $this->sinopsis;
     }
 
-    public function setSinopsis(?string $Sinopsis): static
+    public function setSinopsis(?string $sinopsis): static
     {
-        $this->Sinopsis = $Sinopsis;
+        $this->sinopsis = $sinopsis;
 
         return $this;
     }
 
     public function getAnoPublicacion(): ?\DateTimeInterface
     {
-        return $this->AnoPublicacion;
+        return $this->anoPublicacion;
     }
 
-    public function setAnoPublicacion(\DateTimeInterface $AnoPublicacion): static
+    public function setAnoPublicacion(\DateTimeInterface $anoPublicacion): static
     {
-        $this->AnoPublicacion = $AnoPublicacion;
+        $this->anoPublicacion = $anoPublicacion;
 
         return $this;
     }
 
     public function getEditorial(): ?string
     {
-        return $this->Editorial;
+        return $this->editorial;
     }
 
-    public function setEditorial(string $Editorial): static
+    public function setEditorial(string $editorial): static
     {
-        $this->Editorial = $Editorial;
+        $this->editorial = $editorial;
 
         return $this;
     }
 
     public function getISBN(): ?string
     {
-        return $this->ISBN;
+        return $this->isbn;
     }
 
-    public function setISBN(string $ISBN): static
+    public function setISBN(string $isbn): static
     {
-        $this->ISBN = $ISBN;
+        $this->isbn = $isbn;
 
         return $this;
     }
 
     public function getNumEjemplares(): ?int
     {
-        return $this->NumEjemplares;
+        return $this->numEjemplares;
     }
 
-    public function setNumEjemplares(int $NumEjemplares): static
+    public function setNumEjemplares(int $numEjemplares): static
     {
-        $this->NumEjemplares = $NumEjemplares;
+        $this->numEjemplares = $numEjemplares;
 
         return $this;
     }
