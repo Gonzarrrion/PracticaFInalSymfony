@@ -3,28 +3,26 @@
 {% block title %}Buscar Libro por Autor y Biblioteca{% endblock %}
 
 {% block body %}
-    <h1>Buscar Libro por Autor y Biblioteca</h1>
+<h1>Buscar Libro por Autor y Biblioteca</h1>
 
-    <form action="{{ path('buscar_libro_autor_biblioteca') }}" method="get">
-        <label for="autor">Autor:</label>
-        <input type="text" id="autor" name="autor" required>
-        <label for="biblioteca">Biblioteca:</label>
-        <select id="biblioteca" name="biblioteca">
-            {% for biblioteca in bibliotecas %}
-                <option value="{{ biblioteca.id }}">{{ biblioteca.nombre }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit">Buscar</button>
-    </form>
+<form method="get" action="{{ path('buscar_libro_autor_biblioteca') }}">
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" name="autor" required>
 
+    <label for="nombreBiblioteca">Biblioteca:</label>
+    <input type="text" id="nombreBiblioteca" name="nombreBiblioteca" required>
+
+    <button type="submit">Buscar</button>
+</form>
+
+{% if libros is defined %}
+    <h2>Resultados:</h2>
     <ul>
         {% for libro in libros %}
-            <li>
-                <h2>{{ libro.titulo }}</h2>
-                <p>{{ libro.autor }}</p>
-            </li>
+            <li>{{ libro.titulo }} por {{ libro.autor }} en {{ libro.biblioteca.nombre }}</li>
         {% else %}
             <li>No hay libros disponibles.</li>
         {% endfor %}
     </ul>
+{% endif %}
 {% endblock %}

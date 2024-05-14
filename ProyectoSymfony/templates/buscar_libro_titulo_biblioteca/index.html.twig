@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Buscar Libro por Título y Biblioteca{% endblock %}
+{% block title %} Buscar Libro por Título y Biblioteca {% endblock %}
 
 {% block body %}
     <h1>Buscar Libro por Título y Biblioteca</h1>
@@ -8,12 +8,10 @@
     <form action="{{ path('buscar_libro_titulo_biblioteca') }}" method="get">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo" required>
-        <label for="biblioteca">Biblioteca:</label>
-        <select id="biblioteca" name="biblioteca">
-            {% for biblioteca in bibliotecas %}
-                <option value="{{ biblioteca.id }}">{{ biblioteca.nombre }}</option>
-            {% endfor %}
-        </select>
+
+        <label for="nombreBiblioteca">Biblioteca:</label>
+        <input type="text" id="nombreBiblioteca" name="nombreBiblioteca" required>
+
         <button type="submit">Buscar</button>
     </form>
 
@@ -21,7 +19,7 @@
         {% for libro in libros %}
             <li>
                 <h2>{{ libro.titulo }}</h2>
-                <p>{{ libro.autor }}</p>
+                <p>{{ libro.biblioteca.nombre }}</p>
             </li>
         {% else %}
             <li>No hay libros disponibles.</li>
