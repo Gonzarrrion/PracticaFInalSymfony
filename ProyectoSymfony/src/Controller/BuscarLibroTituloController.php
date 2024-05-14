@@ -9,6 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 use App\Entity\Libro;
 use App\Entity\Biblioteca;
+use Symfony\Component\HttpFoundation\Request;
 
 class BuscarLibroTituloController extends AbstractController
 {
@@ -19,18 +20,32 @@ class BuscarLibroTituloController extends AbstractController
         $this->em = $em;
     }
 
-    #[Route('/buscar/libro/titulo', name: 'app_buscar_libro_titulo')]
-    public function index(): Response
+    #[Route('/buscar/libro/titulo', name: 'buscar_libro_titulo')]
+    public function index(Request $request): Response
     {
-        // Obtenemos el repositorio de la entidad Libro
-        $repository = $this->em->getRepository(Libro::class);
+        $libros = [];
 
-        // Utilizamos el método findBy() para obtener los libros con el título 'El Quijote'
-        $libros = $repository->findBy(['titulo' => 'El Quijote']);
+        if ($request->isMethod('POST')) {
+            $titulo = $request->request->get('titulo');
 
-        // Renderizamos la vista y le pasamos los libros
+            if (!$titulo) {
+                $this->addFlash('error', 'Por favor, proporciona un título para buscar.');
+                return $this->redirectToRoute('buscar_libro_titulo');
+            }
+
+            $query = $this->em->createQueryBuilder()
+                ->select('l', 'b')
+                ->from('App\Entity\Libro', 'l')
+                ->join('l.biblioteca', 'b')
+                ->where('l.titulo LIKE :titulo')
+                ->setParameter('titulo', '%' . $titulo . '%')
+                ->getQuery();
+
+            $libros = $query->getResult();
+        }
+        
         return $this->render('buscar_libro_titulo/index.html.twig', [
-            'libros' => $libros,
+            'libros' => $libros
         ]);
     }
 }

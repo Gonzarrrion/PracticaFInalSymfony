@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Buscar Libro por Título</h1>
 
-    <form action="{{ path('buscar_libro_titulo') }}" method="get">
+    <form action="{{ path('buscar_libro_titulo') }}" method="post">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo" required>
         <button type="submit">Buscar</button>
@@ -16,9 +16,10 @@
             <li>
                 <h2>{{ libro.titulo }}</h2>
                 <p>{{ libro.autor }}</p>
+                <p>{{ libro.biblioteca.nombre }}</p>
             </li>
         {% else %}
             <li>No hay libros disponibles.</li>
         {% endfor %}
     </ul>
-{% endblock %
+{% endblock %}

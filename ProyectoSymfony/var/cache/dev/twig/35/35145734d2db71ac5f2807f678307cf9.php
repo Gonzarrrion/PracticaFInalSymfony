@@ -57,7 +57,7 @@ class __TwigTemplate_8879d30ba55bae323db6ee2e0bdc5e70 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Buscar Libro por Título y Disponibilidad";
+        yield "Buscar libros";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -72,54 +72,57 @@ class __TwigTemplate_8879d30ba55bae323db6ee2e0bdc5e70 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Buscar Libro por Título y Disponibilidad</h1>
+        yield "    <h1>Buscar libros por Título y Disponibilidad</h1>
 
     <form action=\"";
         // line 8
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_titulo_disponibilidad");
-        yield "\" method=\"get\">
-        <label for=\"titulo\">Título:</label>
+        yield "\" method=\"post\">
+        <label for=\"titulo\">Título del libro:</label>
         <input type=\"text\" id=\"titulo\" name=\"titulo\" required>
-        <label for=\"disponibilidad\">Disponibilidad:</label>
-        <select id=\"disponibilidad\" name=\"disponibilidad\">
-            <option value=\"1\">Disponible</option>
-            <option value=\"0\">No disponible</option>
-        </select>
-        <button type=\"submit\">Buscar</button>
+        <input type=\"submit\" value=\"Buscar\">
     </form>
-
-    <ul>
-        ";
-        // line 20
+    
+    ";
+        // line 14
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["libros"]) || array_key_exists("libros", $context) ? $context["libros"] : (function () { throw new RuntimeError('Variable "libros" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["libros"]) || array_key_exists("libros", $context) ? $context["libros"] : (function () { throw new RuntimeError('Variable "libros" does not exist.', 14, $this->source); })()));
         $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["libro"]) {
-            // line 21
-            yield "            <li>
-                <h2>";
-            // line 22
-            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "titulo", [], "any", false, false, false, 22), "html", null, true);
+        foreach ($context['_seq'] as $context["titulo"] => $context["bibliotecas"]) {
+            // line 15
+            yield "        <h2>";
+            yield Twig\Extension\EscaperExtension::escape($this->env, $context["titulo"], "html", null, true);
             yield "</h2>
-                <p>";
-            // line 23
-            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "autor", [], "any", false, false, false, 23), "html", null, true);
-            yield "</p>
-            </li>
         ";
+            // line 16
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable($context["bibliotecas"]);
+            foreach ($context['_seq'] as $context["nombreBiblioteca"] => $context["libro"]) {
+                // line 17
+                yield "            <b><p>Biblioteca:</b> ";
+                yield Twig\Extension\EscaperExtension::escape($this->env, $context["nombreBiblioteca"], "html", null, true);
+                yield "</p>
+            <b><p>Número de ejemplares:</b> ";
+                // line 18
+                yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "num_ejemplares", [], "any", false, false, false, 18), "html", null, true);
+                yield "</p>
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['nombreBiblioteca'], $context['libro'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 20
+            yield "    ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 26
-            yield "            <li>No hay libros disponibles.</li>
-        ";
+            // line 21
+            yield "        <p>No se encontraron libros.</p>
+    ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['libro'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['titulo'], $context['bibliotecas'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
-        yield "    </ul>
-";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -147,40 +150,33 @@ class __TwigTemplate_8879d30ba55bae323db6ee2e0bdc5e70 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  121 => 28,  114 => 26,  106 => 23,  102 => 22,  99 => 21,  94 => 20,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  120 => 21,  115 => 20,  107 => 18,  102 => 17,  98 => 16,  93 => 15,  88 => 14,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Buscar Libro por Título y Disponibilidad{% endblock %}
+{% block title %}Buscar libros{% endblock %}
 
 {% block body %}
-    <h1>Buscar Libro por Título y Disponibilidad</h1>
+    <h1>Buscar libros por Título y Disponibilidad</h1>
 
-    <form action=\"{{ path('buscar_libro_titulo_disponibilidad') }}\" method=\"get\">
-        <label for=\"titulo\">Título:</label>
+    <form action=\"{{ path('buscar_libro_titulo_disponibilidad') }}\" method=\"post\">
+        <label for=\"titulo\">Título del libro:</label>
         <input type=\"text\" id=\"titulo\" name=\"titulo\" required>
-        <label for=\"disponibilidad\">Disponibilidad:</label>
-        <select id=\"disponibilidad\" name=\"disponibilidad\">
-            <option value=\"1\">Disponible</option>
-            <option value=\"0\">No disponible</option>
-        </select>
-        <button type=\"submit\">Buscar</button>
+        <input type=\"submit\" value=\"Buscar\">
     </form>
-
-    <ul>
-        {% for libro in libros %}
-            <li>
-                <h2>{{ libro.titulo }}</h2>
-                <p>{{ libro.autor }}</p>
-            </li>
-        {% else %}
-            <li>No hay libros disponibles.</li>
+    
+    {% for titulo, bibliotecas in libros %}
+        <h2>{{ titulo }}</h2>
+        {% for nombreBiblioteca, libro in bibliotecas %}
+            <b><p>Biblioteca:</b> {{ nombreBiblioteca }}</p>
+            <b><p>Número de ejemplares:</b> {{ libro.num_ejemplares }}</p>
         {% endfor %}
-    </ul>
-{% endblock %}
-", "buscar_libro_titulo_disponibilidad/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_disponibilidad/index.html.twig");
+    {% else %}
+        <p>No se encontraron libros.</p>
+    {% endfor %}
+{% endblock %}", "buscar_libro_titulo_disponibilidad/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_disponibilidad/index.html.twig");
     }
 }

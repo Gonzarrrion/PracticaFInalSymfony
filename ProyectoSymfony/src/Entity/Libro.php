@@ -17,7 +17,7 @@ class Libro
 
     #[ORM\ManyToOne(targetEntity: Biblioteca::class)]
     #[ORM\JoinColumn(name: "biblioteca_id", referencedColumnName: "id", nullable: false)]
-    private ?Biblioteca $Biblioteca = null;
+    private ?Biblioteca $biblioteca = null;
 
     #[ORM\Column(type: "string", length: 255)]
     private ?string $titulo = null;
@@ -132,12 +132,12 @@ class Libro
 
     public function getBiblioteca(): ?Biblioteca
     {
-        return $this->Biblioteca;
+        return $this->biblioteca;
     }
 
-    public function setBiblioteca(?Biblioteca $Biblioteca): self
+    public function setBiblioteca(?Biblioteca $biblioteca): self
     {
-        $this->Biblioteca = $Biblioteca;
+        $this->biblioteca = $biblioteca;
 
         return $this;
     }
