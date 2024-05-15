@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Añadir Nuevo Libro{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Añadir un nuevo libro</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-primary">Guardar libro</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

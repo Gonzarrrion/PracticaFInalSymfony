@@ -5,6 +5,7 @@ namespace Container813iO4u;
 return [
     '.1_ServiceLocator~7BkrUTr' => true,
     '.Psr\\Container\\ContainerInterface $parameter_bag' => true,
+    '.abstract.instanceof.App\\Controller\\AnadirNuevoLibroController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarBiliotecaCiudadController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarBiliotecaNombreController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarLibroAutorBiliotecaController' => true,
@@ -146,7 +147,6 @@ return [
     '.service_locator.H84_pZM' => true,
     '.service_locator.HxfGI0d' => true,
     '.service_locator.KLVvNIq' => true,
-    '.service_locator.L.EDYUC' => true,
     '.service_locator.LMuqDDe' => true,
     '.service_locator.NBUFN6A' => true,
     '.service_locator.PvoQzFT' => true,
@@ -160,6 +160,7 @@ return [
     '.service_locator.etVElvN.twig.template_cache_warmer' => true,
     '.service_locator.gFlme_s' => true,
     '.service_locator.jUv.zyj' => true,
+    '.service_locator.jUv.zyj.App\\Controller\\AnadirNuevoLibroController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarBiliotecaCiudadController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarBiliotecaNombreController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroAutorBiliotecaController' => true,

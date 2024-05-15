@@ -37,6 +37,7 @@ class App_KernelDevDebugContainer extends Container
             'router' => 'getRouterService',
         ];
         $this->fileMap = [
+            'App\\Controller\\AnadirNuevoLibroController' => 'getAnadirNuevoLibroControllerService',
             'App\\Controller\\BuscarBiliotecaCiudadController' => 'getBuscarBiliotecaCiudadControllerService',
             'App\\Controller\\BuscarBiliotecaNombreController' => 'getBuscarBiliotecaNombreControllerService',
             'App\\Controller\\BuscarLibroAutorBiliotecaController' => 'getBuscarLibroAutorBiliotecaControllerService',
@@ -245,7 +246,7 @@ class App_KernelDevDebugContainer extends Container
         }
         $b = new \Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver($container, ($container->privates['logger'] ?? self::getLoggerService($container)));
         $b->allowControllers(['Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController', 'Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController']);
-        $b->allowControllers(['App\\Kernel', 'App\\Controller\\BuscarBiliotecaCiudadController', 'App\\Controller\\BuscarBiliotecaNombreController', 'App\\Controller\\BuscarLibroAutorBiliotecaController', 'App\\Controller\\BuscarLibroEditorialBiliotecaController', 'App\\Controller\\BuscarLibroTituloBiliotecaController', 'App\\Controller\\BuscarLibroTituloController', 'App\\Controller\\BuscarLibroTituloDisponibilidadController', 'App\\Controller\\ListarBibliotecasController', 'App\\Controller\\ListarLibrosBiliotecaController', 'Doctrine\\Bundle\\DoctrineBundle\\Controller\\ProfilerController']);
+        $b->allowControllers(['App\\Kernel', 'App\\Controller\\AnadirNuevoLibroController', 'App\\Controller\\BuscarBiliotecaCiudadController', 'App\\Controller\\BuscarBiliotecaNombreController', 'App\\Controller\\BuscarLibroAutorBiliotecaController', 'App\\Controller\\BuscarLibroEditorialBiliotecaController', 'App\\Controller\\BuscarLibroTituloBiliotecaController', 'App\\Controller\\BuscarLibroTituloController', 'App\\Controller\\BuscarLibroTituloDisponibilidadController', 'App\\Controller\\ListarBibliotecasController', 'App\\Controller\\ListarLibrosBiliotecaController', 'Doctrine\\Bundle\\DoctrineBundle\\Controller\\ProfilerController']);
         $c = ($container->services['debug.stopwatch'] ??= new \Symfony\Component\Stopwatch\Stopwatch(true));
 
         return $container->services['http_kernel'] = new \Symfony\Component\HttpKernel\HttpKernel($a, new \Symfony\Component\HttpKernel\Controller\TraceableControllerResolver($b, $c), ($container->services['request_stack'] ??= new \Symfony\Component\HttpFoundation\RequestStack()), new \Symfony\Component\HttpKernel\Controller\TraceableArgumentResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver(new \Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory(), new RewindableGenerator(function () use ($container) {
