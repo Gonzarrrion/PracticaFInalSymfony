@@ -6,6 +6,8 @@ use App\Entity\Biblioteca;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
 
 class InsertarBibliotecaFormType extends AbstractType
 {
@@ -15,9 +17,9 @@ class InsertarBibliotecaFormType extends AbstractType
             ->add('Nombre')
             ->add('Direccion')
             ->add('Ciudad')
-            ->add('HorarioApertura', null, ['widget' => 'single_text',])
-            ->add('HorarioCierre', null, ['widget' => 'single_text',])
-            ->add('FechaFundacion', null, ['widget' => 'single_text', ])
+            ->add('HorarioApertura', TimeType::class, ['widget' => 'single_text',])
+            ->add('HorarioCierre', TimeType::class, ['widget' => 'single_text',])
+            ->add('FechaFundacion', DateType::class, ['widget' => 'single_text', ])
         ;
     }
 

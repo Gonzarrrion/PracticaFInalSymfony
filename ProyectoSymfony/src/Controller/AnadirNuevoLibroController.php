@@ -12,7 +12,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class AnadirNuevoLibroController extends AbstractController
 {
-    #[Route('/anadir/nuevo/libro', name: 'app_anadir_nuevo_libro')]
+    #[Route('/anadir/nuevo/libro', name: 'anadir_nuevo_libro')]
     public function nuevo(Request $request, EntityManagerInterface $entityManager): Response
     {
         $libro = new Libro();
@@ -24,7 +24,7 @@ class AnadirNuevoLibroController extends AbstractController
             $entityManager->flush();
 
         
-            return $this->redirectToRoute('app_anadir_nuevo_libro'); // por si quieres añadir mas 
+            return $this->redirectToRoute('anadir_nuevo_libro'); // por si quieres añadir mas 
         }
 
         return $this->render('anadir_nuevo_libro/index.html.twig', [

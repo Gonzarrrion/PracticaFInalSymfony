@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class InsertarBibliotecaController extends AbstractController
 {
-    #[Route('/insertar/biblioteca', name: 'app_insertar_biblioteca')]
+    #[Route('/insertar/biblioteca', name: 'insertar_biblioteca')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $biblioteca = new Biblioteca();
