@@ -44,6 +44,7 @@ class App_KernelDevDebugContainer extends Container
             'App\\Controller\\BuscarLibroTituloBibliotecaController' => 'getBuscarLibroTituloBibliotecaControllerService',
             'App\\Controller\\BuscarLibroTituloController' => 'getBuscarLibroTituloControllerService',
             'App\\Controller\\BuscarLibroTituloDisponibilidadController' => 'getBuscarLibroTituloDisponibilidadControllerService',
+            'App\\Controller\\InsertarBibliotecaController' => 'getInsertarBibliotecaControllerService',
             'App\\Controller\\ListarBibliotecasController' => 'getListarBibliotecasControllerService',
             'App\\Controller\\ListarLibrosBibliotecaController' => 'getListarLibrosBibliotecaControllerService',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController' => 'getRedirectControllerService',

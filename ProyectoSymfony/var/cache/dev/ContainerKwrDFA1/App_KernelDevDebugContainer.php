@@ -48,6 +48,11 @@ class App_KernelDevDebugContainer extends Container
             'App\\Controller\\BuscarLibroEditorialBiliotecaController' => 'getBuscarLibroEditorialBiliotecaControllerService',
             'App\\Controller\\BuscarLibroTituloBiliotecaController' => 'getBuscarLibroTituloBiliotecaControllerService',
             'App\\Controller\\BuscarLibroTituloController' => 'getBuscarLibroTituloControllerService',
+<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerN3IxC6q/App_KernelDevDebugContainer.php
+========
+            'App\\Controller\\BuscarLibroTituloDisponibilidadController' => 'getBuscarLibroTituloDisponibilidadControllerService',
+            'App\\Controller\\InsertarBibliotecaController' => 'getInsertarBibliotecaControllerService',
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerVPRCqpY/App_KernelDevDebugContainer.php
             'App\\Controller\\ListarBibliotecasController' => 'getListarBibliotecasControllerService',
             'App\\Controller\\ListarLibrosBiliotecaController' => 'getListarLibrosBiliotecaControllerService',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController' => 'getRedirectControllerService',

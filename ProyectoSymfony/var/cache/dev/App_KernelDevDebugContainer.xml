@@ -249,6 +249,13 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloDisponibilidadController"/>
       </call>
     </service>
+    <service id="App\Controller\InsertarBibliotecaController" class="App\Controller\InsertarBibliotecaController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\InsertarBibliotecaController"/>
+      </call>
+    </service>
     <service id="App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -3276,6 +3283,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroTituloDisponibilidadController" class="App\Controller\BuscarLibroTituloDisponibilidadController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroTituloDisponibilidadController" class="App\Controller\BuscarLibroTituloDisponibilidadController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BuscarLibroTituloDisponibilidadController" class="App\Controller\BuscarLibroTituloDisponibilidadController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\InsertarBibliotecaController" class="App\Controller\InsertarBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\InsertarBibliotecaController" class="App\Controller\InsertarBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\InsertarBibliotecaController" class="App\Controller\InsertarBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ListarBibliotecasController" class="App\Controller\ListarBibliotecasController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3912,6 +3922,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\InsertarBibliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\InsertarBibliotecaController"/>
+      <argument>App\Controller\InsertarBibliotecaController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
     <service id=".service_locator.jUv.zyj.App\Controller\ListarBibliotecasController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ListarBibliotecasController"/>
       <argument>App\Controller\ListarBibliotecasController</argument>
@@ -4033,6 +4049,7 @@
           <argument>App\Controller\BuscarLibroTituloBibliotecaController</argument>
           <argument>App\Controller\BuscarLibroTituloController</argument>
           <argument>App\Controller\BuscarLibroTituloDisponibilidadController</argument>
+          <argument>App\Controller\InsertarBibliotecaController</argument>
           <argument>App\Controller\ListarBibliotecasController</argument>
           <argument>App\Controller\ListarLibrosBibliotecaController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>

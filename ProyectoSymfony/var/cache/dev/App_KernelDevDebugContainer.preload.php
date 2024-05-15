@@ -128,6 +128,7 @@ $classes[] = 'App\Controller\BuscarLibroEditorialBibliotecaController';
 $classes[] = 'App\Controller\BuscarLibroTituloBibliotecaController';
 $classes[] = 'App\Controller\BuscarLibroTituloController';
 $classes[] = 'App\Controller\BuscarLibroTituloDisponibilidadController';
+$classes[] = 'App\Controller\InsertarBibliotecaController';
 $classes[] = 'App\Controller\ListarBibliotecasController';
 $classes[] = 'App\Controller\ListarLibrosBibliotecaController';
 $classes[] = 'App\Form\AnadirNuevoLibroFormType';

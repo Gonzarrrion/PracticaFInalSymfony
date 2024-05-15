@@ -20,6 +20,7 @@ return [
     '.abstract.instanceof.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarLibroTituloController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+    '.abstract.instanceof.App\\Controller\\InsertarBibliotecaController' => true,
     '.abstract.instanceof.App\\Controller\\ListarBibliotecasController' => true,
     '.abstract.instanceof.App\\Controller\\ListarLibrosBiliotecaController' => true,
 <<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
@@ -106,6 +107,7 @@ return [
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\BuscarLibroTituloController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\InsertarBibliotecaController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ListarBibliotecasController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ListarLibrosBiliotecaController' => true,
 <<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
@@ -128,6 +130,7 @@ return [
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\InsertarBibliotecaController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\ListarBibliotecasController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\ListarLibrosBiliotecaController' => true,
     '.maker.auto_command.make_auth.lazy' => true,
@@ -196,6 +199,7 @@ return [
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroTituloController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+    '.service_locator.jUv.zyj.App\\Controller\\InsertarBibliotecaController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\ListarBibliotecasController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\ListarLibrosBiliotecaController' => true,
     '.service_locator.lLv4pWF' => true,
