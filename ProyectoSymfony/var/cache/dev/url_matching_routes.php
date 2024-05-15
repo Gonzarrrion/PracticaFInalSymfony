@@ -8,6 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/anadir/nuevo/libro' => [[['_route' => 'app_anadir_nuevo_libro', '_controller' => 'App\\Controller\\AnadirNuevoLibroController::nuevo'], null, null, null, false, false, null]],
         '/buscar/biblioteca/ciudad' => [[['_route' => 'buscar_biblioteca_ciudad', '_controller' => 'App\\Controller\\BuscarBibliotecaCiudadController::index'], null, null, null, false, false, null]],
         '/buscar/biblioteca/nombre' => [[['_route' => 'buscar_biblioteca_nombre', '_controller' => 'App\\Controller\\BuscarBibliotecaNombreController::index'], null, null, null, false, false, null]],
         '/buscar/libro/autor/biblioteca' => [[['_route' => 'buscar_libro_autor_biblioteca', '_controller' => 'App\\Controller\\BuscarLibroAutorBibliotecaController::index'], null, null, null, false, false, null]],

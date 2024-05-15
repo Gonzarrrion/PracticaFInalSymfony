@@ -186,6 +186,13 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
+    <service id="App\Controller\AnadirNuevoLibroController" class="App\Controller\AnadirNuevoLibroController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\AnadirNuevoLibroController"/>
+      </call>
+    </service>
     <service id="App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -261,28 +268,7 @@
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
-    <service id="App\Form\BuscarBibliotecaCiudadFormType" class="App\Form\BuscarBibliotecaCiudadFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\BuscarBibliotecaNombreFormType" class="App\Form\BuscarBibliotecaNombreFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\BuscarLibroAutorBibliotecaFormType" class="App\Form\BuscarLibroAutorBibliotecaFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\BuscarLibroEditorialBibliotecaFormType" class="App\Form\BuscarLibroEditorialBibliotecaFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\BuscarLibroTituloBibliotecaFormType" class="App\Form\BuscarLibroTituloBibliotecaFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\BuscarLibroTituloDisponibilidadFormType" class="App\Form\BuscarLibroTituloDisponibilidadFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\BuscarLibroTituloFormType" class="App\Form\BuscarLibroTituloFormType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\ListarLibrosBibliotecaFormType" class="App\Form\ListarLibrosBibliotecaFormType" autowire="true" autoconfigure="true">
+    <service id="App\Form\AnadirNuevoLibroFormType" class="App\Form\AnadirNuevoLibroFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\BibliotecaRepository" class="App\Repository\BibliotecaRepository" autowire="true" autoconfigure="true">
@@ -858,14 +844,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
-        <argument>App\Form\BuscarBibliotecaCiudadFormType</argument>
-        <argument>App\Form\BuscarBibliotecaNombreFormType</argument>
-        <argument>App\Form\BuscarLibroAutorBibliotecaFormType</argument>
-        <argument>App\Form\BuscarLibroEditorialBibliotecaFormType</argument>
-        <argument>App\Form\BuscarLibroTituloBibliotecaFormType</argument>
-        <argument>App\Form\BuscarLibroTituloDisponibilidadFormType</argument>
-        <argument>App\Form\BuscarLibroTituloFormType</argument>
-        <argument>App\Form\ListarLibrosBibliotecaFormType</argument>
+        <argument>App\Form\AnadirNuevoLibroFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1759,7 +1738,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.GSagzMq"/>
+      <argument type="service" id=".service_locator.RmE69TM"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3273,6 +3252,9 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AnadirNuevoLibroController" class="App\Controller\AnadirNuevoLibroController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AnadirNuevoLibroController" class="App\Controller\AnadirNuevoLibroController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AnadirNuevoLibroController" class="App\Controller\AnadirNuevoLibroController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BuscarBibliotecaCiudadController" class="App\Controller\BuscarBibliotecaCiudadController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3302,22 +3284,8 @@
     <service id=".abstract.instanceof.App\Controller\ListarLibrosBibliotecaController" class="App\Controller\ListarLibrosBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarBibliotecaCiudadFormType" class="App\Form\BuscarBibliotecaCiudadFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarBibliotecaCiudadFormType" class="App\Form\BuscarBibliotecaCiudadFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarBibliotecaNombreFormType" class="App\Form\BuscarBibliotecaNombreFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarBibliotecaNombreFormType" class="App\Form\BuscarBibliotecaNombreFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarLibroAutorBibliotecaFormType" class="App\Form\BuscarLibroAutorBibliotecaFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarLibroAutorBibliotecaFormType" class="App\Form\BuscarLibroAutorBibliotecaFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarLibroEditorialBibliotecaFormType" class="App\Form\BuscarLibroEditorialBibliotecaFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarLibroEditorialBibliotecaFormType" class="App\Form\BuscarLibroEditorialBibliotecaFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarLibroTituloBibliotecaFormType" class="App\Form\BuscarLibroTituloBibliotecaFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarLibroTituloBibliotecaFormType" class="App\Form\BuscarLibroTituloBibliotecaFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarLibroTituloDisponibilidadFormType" class="App\Form\BuscarLibroTituloDisponibilidadFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarLibroTituloDisponibilidadFormType" class="App\Form\BuscarLibroTituloDisponibilidadFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BuscarLibroTituloFormType" class="App\Form\BuscarLibroTituloFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\BuscarLibroTituloFormType" class="App\Form\BuscarLibroTituloFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ListarLibrosBibliotecaFormType" class="App\Form\ListarLibrosBibliotecaFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\ListarLibrosBibliotecaFormType" class="App\Form\ListarLibrosBibliotecaFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AnadirNuevoLibroFormType" class="App\Form\AnadirNuevoLibroFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AnadirNuevoLibroFormType" class="App\Form\AnadirNuevoLibroFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BibliotecaRepository" class="App\Repository\BibliotecaRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\BibliotecaRepository" class="App\Repository\BibliotecaRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\LibroRepository" class="App\Repository\LibroRepository" autowire="true" abstract="true"/>
@@ -3831,17 +3799,10 @@
       <argument type="service" id="argument_resolver.query_parameter_value_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.GSagzMq" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.RmE69TM" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Form\BuscarBibliotecaCiudadFormType" type="service_closure" id="App\Form\BuscarBibliotecaCiudadFormType"/>
-        <argument key="App\Form\BuscarBibliotecaNombreFormType" type="service_closure" id="App\Form\BuscarBibliotecaNombreFormType"/>
-        <argument key="App\Form\BuscarLibroAutorBibliotecaFormType" type="service_closure" id="App\Form\BuscarLibroAutorBibliotecaFormType"/>
-        <argument key="App\Form\BuscarLibroEditorialBibliotecaFormType" type="service_closure" id="App\Form\BuscarLibroEditorialBibliotecaFormType"/>
-        <argument key="App\Form\BuscarLibroTituloBibliotecaFormType" type="service_closure" id="App\Form\BuscarLibroTituloBibliotecaFormType"/>
-        <argument key="App\Form\BuscarLibroTituloDisponibilidadFormType" type="service_closure" id="App\Form\BuscarLibroTituloDisponibilidadFormType"/>
-        <argument key="App\Form\BuscarLibroTituloFormType" type="service_closure" id="App\Form\BuscarLibroTituloFormType"/>
-        <argument key="App\Form\ListarLibrosBibliotecaFormType" type="service_closure" id="App\Form\ListarLibrosBibliotecaFormType"/>
+        <argument key="App\Form\AnadirNuevoLibroFormType" type="service_closure" id="App\Form\AnadirNuevoLibroFormType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -3902,6 +3863,12 @@
         <argument key="router" type="service_closure" id="router.default" on-invalid="ignore"/>
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
+    </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\AnadirNuevoLibroController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AnadirNuevoLibroController"/>
+      <argument>App\Controller\AnadirNuevoLibroController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
     <service id=".service_locator.jUv.zyj.App\Controller\BuscarBibliotecaCiudadController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\BuscarBibliotecaCiudadController"/>
@@ -4058,6 +4025,7 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>App\Kernel</argument>
+          <argument>App\Controller\AnadirNuevoLibroController</argument>
           <argument>App\Controller\BuscarBibliotecaCiudadController</argument>
           <argument>App\Controller\BuscarBibliotecaNombreController</argument>
           <argument>App\Controller\BuscarLibroAutorBibliotecaController</argument>
@@ -4861,6 +4829,7 @@
     <service id="twig.error_renderer.html.inner" alias="error_handler.error_renderer.html"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
+    <service id=".service_locator.9e2t_lq" alias=".service_locator.CsMkqUa"/>
     <service id=".service_locator.HxfGI0d" alias=".service_locator.jUv.zyj"/>
   </services>
 </container>

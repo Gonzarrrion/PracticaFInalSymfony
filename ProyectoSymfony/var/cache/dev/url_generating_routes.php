@@ -4,6 +4,7 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'app_anadir_nuevo_libro' => [[], ['_controller' => 'App\\Controller\\AnadirNuevoLibroController::nuevo'], [], [['text', '/anadir/nuevo/libro']], [], [], []],
     'buscar_biblioteca_ciudad' => [[], ['_controller' => 'App\\Controller\\BuscarBibliotecaCiudadController::index'], [], [['text', '/buscar/biblioteca/ciudad']], [], [], []],
     'buscar_biblioteca_nombre' => [[], ['_controller' => 'App\\Controller\\BuscarBibliotecaNombreController::index'], [], [['text', '/buscar/biblioteca/nombre']], [], [], []],
     'buscar_libro_autor_biblioteca' => [[], ['_controller' => 'App\\Controller\\BuscarLibroAutorBibliotecaController::index'], [], [['text', '/buscar/libro/autor/biblioteca']], [], [], []],
@@ -13,6 +14,7 @@ return [
     'buscar_libro_titulo_disponibilidad' => [[], ['_controller' => 'App\\Controller\\BuscarLibroTituloDisponibilidadController::index'], [], [['text', '/buscar/libro/titulo/disponibilidad']], [], [], []],
     'app_listar_bibliotecas' => [[], ['_controller' => 'App\\Controller\\ListarBibliotecasController::index'], [], [['text', '/listar/bibliotecas']], [], [], []],
     'listar_libros_biblioteca' => [[], ['_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::index'], [], [['text', '/listar/libros/biblioteca']], [], [], []],
+    'App\Controller\AnadirNuevoLibroController::nuevo' => [[], ['_controller' => 'App\\Controller\\AnadirNuevoLibroController::nuevo'], [], [['text', '/anadir/nuevo/libro']], [], [], []],
     'App\Controller\BuscarBibliotecaCiudadController::index' => [[], ['_controller' => 'App\\Controller\\BuscarBibliotecaCiudadController::index'], [], [['text', '/buscar/biblioteca/ciudad']], [], [], []],
     'App\Controller\BuscarBibliotecaNombreController::index' => [[], ['_controller' => 'App\\Controller\\BuscarBibliotecaNombreController::index'], [], [['text', '/buscar/biblioteca/nombre']], [], [], []],
     'App\Controller\BuscarLibroAutorBibliotecaController::index' => [[], ['_controller' => 'App\\Controller\\BuscarLibroAutorBibliotecaController::index'], [], [['text', '/buscar/libro/autor/biblioteca']], [], [], []],
