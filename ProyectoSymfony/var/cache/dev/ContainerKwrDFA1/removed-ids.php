@@ -205,6 +205,10 @@ return [
     '.service_locator.lLv4pWF' => true,
 <<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
     '.service_locator.qoUWBxK' => true,
+========
+    '.service_locator.neWg8d7' => true,
+    '.service_locator.s4CQdeT' => true,
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerCYReeqH/removed-ids.php
     '.service_locator.u6DWx23' => true,
 ========
     '.service_locator.mnr9eSp' => true,
