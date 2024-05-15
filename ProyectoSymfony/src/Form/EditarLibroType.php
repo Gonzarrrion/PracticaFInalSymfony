@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class EditarLibroType extends AbstractType
 {
@@ -17,7 +18,7 @@ class EditarLibroType extends AbstractType
             ->add('Titulo')
             ->add('Autor')
             ->add('Sinopsis')
-            ->add('AnoPublicacion', null, [
+            ->add('AnoPublicacion', DateType::class, [
                 'widget' => 'single_text',
             ])
             ->add('Editorial')
