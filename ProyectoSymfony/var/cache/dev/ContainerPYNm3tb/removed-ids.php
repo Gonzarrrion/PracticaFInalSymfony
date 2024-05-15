@@ -174,6 +174,7 @@ return [
     '.service_locator.etVElvN' => true,
     '.service_locator.etVElvN.twig.template_cache_warmer' => true,
     '.service_locator.gFlme_s' => true,
+    '.service_locator.guaRQS0' => true,
     '.service_locator.jUv.zyj' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarBiliotecaCiudadController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarBiliotecaNombreController' => true,
