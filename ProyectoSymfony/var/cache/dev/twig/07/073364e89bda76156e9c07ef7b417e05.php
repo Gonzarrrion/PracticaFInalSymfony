@@ -166,6 +166,10 @@ class __TwigTemplate_4c4e24df804f84352215cf35b46cd2fa extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
+<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/twig/07/073364e89bda76156e9c07ef7b417e05.php
 ", "base.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinal/PracticaFInalAS/ProyectoSymfony/templates/base.html.twig");
+=======
+", "base.html.twig", "/Users/administrador/Desktop/git/PracticaFinalSymfony/ProyectoSymfony/templates/base.html.twig");
+>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/twig/14/145218a22ef8d653670ed36ea55b7ce0.php
     }
 }

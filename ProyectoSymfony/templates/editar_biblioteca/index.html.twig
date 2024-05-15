@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Biblioteca{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Editar Biblioteca</h1>
+
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endfor %}
+
+    {% if form is defined %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn btn-primary">Actualizar Biblioteca</button>
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success" style="margin-top: 20px;">{{ message }}</div>
+        {% endfor %}
+
+        {{ form_end(form) }}
+    {% else %}
+        <p>No existe una biblioteca con el ID proporcionado.</p>
+    {% endif %}
+</div>
+{% endblock %}
