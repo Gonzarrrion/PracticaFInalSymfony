@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class EditarLibroController extends AbstractController
 {
-    #[Route('/editar/libro/{id}', name: 'app_editar_libro')]
+    #[Route('/editar/libro/{id}', name: 'editar_libro')]
     public function index(int $id, Request $request, EntityManagerInterface $entityManager, LibroRepository $libroRepository): Response
     {
 
@@ -32,7 +32,7 @@ class EditarLibroController extends AbstractController
             $entityManager->flush();
             $this->addFlash('success', 'Libro actualizado correctamente.');
 
-            return $this->redirectToRoute('app_editar_libro', ['id' => $libro->getId()]);  // evitar el que se cargue vrias veces 
+            return $this->redirectToRoute('editar_libro', ['id' => $libro->getId()]);  // evitar el que se cargue vrias veces 
         }
 
         return $this->render('editar_libro/index.html.twig', [

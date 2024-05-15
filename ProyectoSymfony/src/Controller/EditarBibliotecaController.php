@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class EditarBibliotecaController extends AbstractController
 {
-    #[Route('/editar/biblioteca/{id}', name: 'app_editar_biblioteca')]
+    #[Route('/editar/biblioteca/{id}', name: 'editar_biblioteca')]
     public function index(int $id, Request $request, EntityManagerInterface $entityManager, BibliotecaRepository $bibliotecaRepository): Response
     {
         $biblioteca = $bibliotecaRepository->find($id);
@@ -32,7 +32,7 @@ class EditarBibliotecaController extends AbstractController
             $this->addFlash('success', 'Biblioteca actualizada correctamente.');
 
             // para que no se añada 2 veces si recargas la pagina 
-            return $this->redirectToRoute('app_editar_biblioteca', ['id' => $biblioteca->getId()]);
+            return $this->redirectToRoute('editar_biblioteca', ['id' => $biblioteca->getId()]);
         }
 
         return $this->render('editar_biblioteca/index.html.twig', [

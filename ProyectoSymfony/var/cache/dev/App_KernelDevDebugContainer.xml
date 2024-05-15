@@ -249,6 +249,13 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloDisponibilidadController"/>
       </call>
     </service>
+    <service id="App\Controller\EditarBibliotecaController" class="App\Controller\EditarBibliotecaController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\EditarBibliotecaController"/>
+      </call>
+    </service>
     <service id="App\Controller\EditarLibroController" class="App\Controller\EditarLibroController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -283,6 +290,9 @@
       <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\Form\AnadirNuevoLibroFormType" class="App\Form\AnadirNuevoLibroFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\EditarBibliotecaType" class="App\Form\EditarBibliotecaType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\EditarLibroType" class="App\Form\EditarLibroType" autowire="true" autoconfigure="true">
@@ -322,7 +332,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.AKniF93"/>
+      <argument type="service" id=".service_locator.XN.uUje"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -865,6 +875,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\AnadirNuevoLibroFormType</argument>
+        <argument>App\Form\EditarBibliotecaType</argument>
         <argument>App\Form\EditarLibroType</argument>
         <argument>App\Form\InsertarBibliotecaFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -1472,7 +1483,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.AKniF93"/>
+      <argument type="service" id=".service_locator.XN.uUje"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver">
       <call method="addLoader">
@@ -1760,7 +1771,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.oWKhdg9"/>
+      <argument type="service" id=".service_locator.zbA7FA3"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3298,6 +3309,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BuscarLibroTituloDisponibilidadController" class="App\Controller\BuscarLibroTituloDisponibilidadController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BuscarLibroTituloDisponibilidadController" class="App\Controller\BuscarLibroTituloDisponibilidadController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BuscarLibroTituloDisponibilidadController" class="App\Controller\BuscarLibroTituloDisponibilidadController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EditarBibliotecaController" class="App\Controller\EditarBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EditarBibliotecaController" class="App\Controller\EditarBibliotecaController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\EditarBibliotecaController" class="App\Controller\EditarBibliotecaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EditarLibroController" class="App\Controller\EditarLibroController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EditarLibroController" class="App\Controller\EditarLibroController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\EditarLibroController" class="App\Controller\EditarLibroController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3314,6 +3328,8 @@
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AnadirNuevoLibroFormType" class="App\Form\AnadirNuevoLibroFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AnadirNuevoLibroFormType" class="App\Form\AnadirNuevoLibroFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EditarBibliotecaType" class="App\Form\EditarBibliotecaType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\EditarBibliotecaType" class="App\Form\EditarBibliotecaType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EditarLibroType" class="App\Form\EditarLibroType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\EditarLibroType" class="App\Form\EditarLibroType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\InsertarBibliotecaFormType" class="App\Form\InsertarBibliotecaFormType" autowire="true" abstract="true"/>
@@ -3751,6 +3767,13 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
+    <service id=".service_locator.guaRQS0" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="bibliotecaRepository" type="service_closure" id="App\Repository\BibliotecaRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
     <service id=".service_locator.kqGXT5k" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -3758,10 +3781,11 @@
         <argument key="libroRepository" type="service_closure" id="App\Repository\LibroRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.AKniF93" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.XN.uUje" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AnadirNuevoLibroController::nuevo" type="service_closure" id=".service_locator.CsMkqUa"/>
+        <argument key="App\Controller\EditarBibliotecaController::index" type="service_closure" id=".service_locator.guaRQS0"/>
         <argument key="App\Controller\EditarLibroController::index" type="service_closure" id=".service_locator.kqGXT5k"/>
         <argument key="App\Controller\InsertarBibliotecaController::index" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -3769,6 +3793,7 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Controller\AnadirNuevoLibroController:nuevo" type="service_closure" id=".service_locator.CsMkqUa"/>
+        <argument key="App\Controller\EditarBibliotecaController:index" type="service_closure" id=".service_locator.guaRQS0"/>
         <argument key="App\Controller\EditarLibroController:index" type="service_closure" id=".service_locator.kqGXT5k"/>
         <argument key="App\Controller\InsertarBibliotecaController:index" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -3842,10 +3867,11 @@
       <argument type="service" id="argument_resolver.query_parameter_value_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.oWKhdg9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.zbA7FA3" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AnadirNuevoLibroFormType" type="service_closure" id="App\Form\AnadirNuevoLibroFormType"/>
+        <argument key="App\Form\EditarBibliotecaType" type="service_closure" id="App\Form\EditarBibliotecaType"/>
         <argument key="App\Form\EditarLibroType" type="service_closure" id="App\Form\EditarLibroType"/>
         <argument key="App\Form\InsertarBibliotecaFormType" type="service_closure" id="App\Form\InsertarBibliotecaFormType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
@@ -3954,6 +3980,12 @@
     <service id=".service_locator.jUv.zyj.App\Controller\BuscarLibroTituloDisponibilidadController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\BuscarLibroTituloDisponibilidadController"/>
       <argument>App\Controller\BuscarLibroTituloDisponibilidadController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\EditarBibliotecaController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\EditarBibliotecaController"/>
+      <argument>App\Controller\EditarBibliotecaController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
@@ -4090,6 +4122,7 @@
           <argument>App\Controller\BuscarLibroTituloBibliotecaController</argument>
           <argument>App\Controller\BuscarLibroTituloController</argument>
           <argument>App\Controller\BuscarLibroTituloDisponibilidadController</argument>
+          <argument>App\Controller\EditarBibliotecaController</argument>
           <argument>App\Controller\EditarLibroController</argument>
           <argument>App\Controller\InsertarBibliotecaController</argument>
           <argument>App\Controller\ListarBibliotecasController</argument>
@@ -4877,7 +4910,7 @@
     <service id="doctrine.migrations.metadata_storage" alias="doctrine.migrations.storage.table_storage"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.AKniF93"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.XN.uUje"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -4889,6 +4922,7 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
     <service id=".service_locator.9e2t_lq" alias=".service_locator.CsMkqUa"/>
+    <service id=".service_locator.veSnyY1" alias=".service_locator.guaRQS0"/>
     <service id=".service_locator.b91Hub3" alias=".service_locator.kqGXT5k"/>
     <service id=".service_locator.HxfGI0d" alias=".service_locator.jUv.zyj"/>
   </services>

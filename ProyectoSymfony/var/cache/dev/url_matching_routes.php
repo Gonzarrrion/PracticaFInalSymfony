@@ -23,13 +23,17 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
-                .'|/editar/libro/([^/]++)(*:64)'
+                .'|/editar/(?'
+                    .'|biblioteca/([^/]++)(*:72)'
+                    .'|libro/([^/]++)(*:93)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        64 => [
-            [['_route' => 'app_editar_libro', '_controller' => 'App\\Controller\\EditarLibroController::index'], ['id'], null, null, false, true, null],
+        72 => [[['_route' => 'editar_biblioteca', '_controller' => 'App\\Controller\\EditarBibliotecaController::index'], ['id'], null, null, false, true, null]],
+        93 => [
+            [['_route' => 'editar_libro', '_controller' => 'App\\Controller\\EditarLibroController::index'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

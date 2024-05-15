@@ -6,6 +6,8 @@ use App\Entity\Biblioteca;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
 
 class EditarBibliotecaType extends AbstractType
 {
@@ -15,13 +17,13 @@ class EditarBibliotecaType extends AbstractType
             ->add('Nombre')
             ->add('Direccion')
             ->add('Ciudad')
-            ->add('HorarioApertura', null, [
+            ->add('HorarioApertura', TimeType::class, [
                 'widget' => 'single_text',
             ])
-            ->add('HorarioCierre', null, [
+            ->add('HorarioCierre', TimeType::class, [
                 'widget' => 'single_text',
             ])
-            ->add('FechaFundacion', null, [
+            ->add('FechaFundacion', DateType::class, [
                 'widget' => 'single_text',
             ])
         ;
