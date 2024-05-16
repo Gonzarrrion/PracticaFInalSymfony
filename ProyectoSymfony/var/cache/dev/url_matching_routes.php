@@ -12,11 +12,27 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
+<<<<<<< Updated upstream
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
+=======
+                .'|/editar/(?'
+                    .'|biblioteca/([^/]++)(*:72)'
+                    .'|libro/([^/]++)(*:93)'
+                .')'
+                .'|/borrar/libro/([^/]++)(*:123)'
+            .')/?$}sDu',
+    ],
+    [ // $dynamicRoutes
+        35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        72 => [[['_route' => 'editar_biblioteca', '_controller' => 'App\\Controller\\EditarBibliotecaController::index'], ['id'], null, null, false, true, null]],
+        93 => [[['_route' => 'editar_libro', '_controller' => 'App\\Controller\\EditarLibroController::index'], ['id'], null, null, false, true, null]],
+        123 => [
+            [['_route' => 'borrar_libro', '_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::borrarLibro'], ['id'], ['POST' => 0], null, false, true, null],
+>>>>>>> Stashed changes
             [null, null, null, null, false, false, 0],
         ],
     ],
