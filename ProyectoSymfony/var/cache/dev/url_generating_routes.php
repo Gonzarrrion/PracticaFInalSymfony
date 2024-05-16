@@ -16,7 +16,8 @@ return [
     'editar_biblioteca' => [['id'], ['_controller' => 'App\\Controller\\EditarBibliotecaController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/editar/biblioteca']], [], [], []],
     'editar_libro' => [['id'], ['_controller' => 'App\\Controller\\EditarLibroController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/editar/libro']], [], [], []],
     'insertar_biblioteca' => [[], ['_controller' => 'App\\Controller\\InsertarBibliotecaController::index'], [], [['text', '/insertar/biblioteca']], [], [], []],
-    'app_listar_bibliotecas' => [[], ['_controller' => 'App\\Controller\\ListarBibliotecasController::index'], [], [['text', '/listar/bibliotecas']], [], [], []],
+    'listar_bibliotecas' => [[], ['_controller' => 'App\\Controller\\ListarBibliotecasController::index'], [], [['text', '/listar/bibliotecas']], [], [], []],
+    'borrar_biblioteca' => [['id'], ['_controller' => 'App\\Controller\\ListarBibliotecasController::borrarBiblioteca'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/borrar/biblioteca']], [], [], []],
     'listar_libros_biblioteca' => [[], ['_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::index'], [], [['text', '/listar/libros/biblioteca']], [], [], []],
     'borrar_libro' => [['id'], ['_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::borrarLibro'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/borrar/libro']], [], [], []],
     'App\Controller\AnadirNuevoLibroController::nuevo' => [[], ['_controller' => 'App\\Controller\\AnadirNuevoLibroController::nuevo'], [], [['text', '/anadir/nuevo/libro']], [], [], []],
@@ -32,6 +33,7 @@ return [
     'App\Controller\EditarLibroController::index' => [['id'], ['_controller' => 'App\\Controller\\EditarLibroController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/editar/libro']], [], [], []],
     'App\Controller\InsertarBibliotecaController::index' => [[], ['_controller' => 'App\\Controller\\InsertarBibliotecaController::index'], [], [['text', '/insertar/biblioteca']], [], [], []],
     'App\Controller\ListarBibliotecasController::index' => [[], ['_controller' => 'App\\Controller\\ListarBibliotecasController::index'], [], [['text', '/listar/bibliotecas']], [], [], []],
+    'App\Controller\ListarBibliotecasController::borrarBiblioteca' => [['id'], ['_controller' => 'App\\Controller\\ListarBibliotecasController::borrarBiblioteca'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/borrar/biblioteca']], [], [], []],
     'App\Controller\ListarLibrosBibliotecaController::index' => [[], ['_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::index'], [], [['text', '/listar/libros/biblioteca']], [], [], []],
     'App\Controller\ListarLibrosBibliotecaController::borrarLibro' => [['id'], ['_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::borrarLibro'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/borrar/libro']], [], [], []],
 ];

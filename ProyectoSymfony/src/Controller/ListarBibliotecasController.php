@@ -19,7 +19,7 @@ class ListarBibliotecasController extends AbstractController
         $this->em = $em;
     }
     
-    #[Route('/listar/bibliotecas', name: 'app_listar_bibliotecas')]
+    #[Route('/listar/bibliotecas', name: 'listar_bibliotecas')]
     public function index(): Response
     {   
         
@@ -36,16 +36,24 @@ class ListarBibliotecasController extends AbstractController
     }
 
 
-    #[Route('/borrar/biblioteca/{id}', name: 'app_borrar_biblioteca', methods: ["POST"])]
+    #[Route('/borrar/biblioteca/{id}', name: 'borrar_biblioteca', methods: ["POST"])]
     public function borrarBiblioteca(int $id): Response
     {
         $biblioteca = $this->em->getRepository(Biblioteca::class)->find($id);
-
         if ($biblioteca) {
+            // Obtener los libros asociados a la biblioteca
+            $libros = $this->em->getRepository(Libro::class)->findBy(['biblioteca' => $biblioteca]);
+
+            // Eliminar los libros
+            foreach ($libros as $libro) {
+                $this->em->remove($libro);
+            }
+
+            // Ahora puedes eliminar la biblioteca
             $this->em->remove($biblioteca);
             $this->em->flush();
         }
 
-        return $this->redirectToRoute('app_listar_bibliotecas');
+        return $this->redirectToRoute('listar_bibliotecas');
     }
 }

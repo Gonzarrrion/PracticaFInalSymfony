@@ -18,7 +18,7 @@ return [
         '/buscar/libro/titulo' => [[['_route' => 'buscar_libro_titulo', '_controller' => 'App\\Controller\\BuscarLibroTituloController::index'], null, null, null, false, false, null]],
         '/buscar/libro/titulo/disponibilidad' => [[['_route' => 'buscar_libro_titulo_disponibilidad', '_controller' => 'App\\Controller\\BuscarLibroTituloDisponibilidadController::index'], null, null, null, false, false, null]],
         '/insertar/biblioteca' => [[['_route' => 'insertar_biblioteca', '_controller' => 'App\\Controller\\InsertarBibliotecaController::index'], null, null, null, false, false, null]],
-        '/listar/bibliotecas' => [[['_route' => 'app_listar_bibliotecas', '_controller' => 'App\\Controller\\ListarBibliotecasController::index'], null, null, null, false, false, null]],
+        '/listar/bibliotecas' => [[['_route' => 'listar_bibliotecas', '_controller' => 'App\\Controller\\ListarBibliotecasController::index'], null, null, null, false, false, null]],
         '/listar/libros/biblioteca' => [[['_route' => 'listar_libros_biblioteca', '_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -28,14 +28,18 @@ return [
                     .'|biblioteca/([^/]++)(*:72)'
                     .'|libro/([^/]++)(*:93)'
                 .')'
-                .'|/borrar/libro/([^/]++)(*:123)'
+                .'|/borrar/(?'
+                    .'|biblioteca/([^/]++)(*:131)'
+                    .'|libro/([^/]++)(*:153)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         72 => [[['_route' => 'editar_biblioteca', '_controller' => 'App\\Controller\\EditarBibliotecaController::index'], ['id'], null, null, false, true, null]],
         93 => [[['_route' => 'editar_libro', '_controller' => 'App\\Controller\\EditarLibroController::index'], ['id'], null, null, false, true, null]],
-        123 => [
+        131 => [[['_route' => 'borrar_biblioteca', '_controller' => 'App\\Controller\\ListarBibliotecasController::borrarBiblioteca'], ['id'], ['POST' => 0], null, false, true, null]],
+        153 => [
             [['_route' => 'borrar_libro', '_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::borrarLibro'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
