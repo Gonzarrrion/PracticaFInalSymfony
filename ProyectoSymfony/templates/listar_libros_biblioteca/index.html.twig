@@ -13,7 +13,11 @@
         <button type="submit">Buscar</button>
     </form>
 
-    <h1>Listar Libros de la {{biblioteca.nombre}}</h1>
+    {% if biblioteca is not null %}
+        <h1>Listar Libros de la {{biblioteca.nombre}}</h1>
+    {% else %}
+        <h1>No se ha seleccionado ninguna biblioteca</h1>
+    {% endif %}
 
     <ul>
         {% for libro in libros %}
