@@ -6,11 +6,11 @@ namespace ContainerGx2YOkN;
 return [
     '.1_ServiceLocator~K6R4jhs' => true,
 ========
-namespace ContainerPYNm3tb;
+namespace ContainerSO4lYH1;
 
 return [
-    '.1_ServiceLocator~wCiz4Vf' => true,
->>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerPYNm3tb/removed-ids.php
+    '.1_ServiceLocator~z0R6W2K' => true,
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerSO4lYH1/removed-ids.php
     '.Psr\\Container\\ContainerInterface $parameter_bag' => true,
     '.abstract.instanceof.App\\Controller\\BuscarBiliotecaCiudadController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarBiliotecaNombreController' => true,
@@ -19,24 +19,23 @@ return [
     '.abstract.instanceof.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarLibroTituloController' => true,
     '.abstract.instanceof.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
-    '.abstract.instanceof.App\\Controller\\EditarLibroController' => true,
+<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
     '.abstract.instanceof.App\\Controller\\ListarBibliotecasController' => true,
     '.abstract.instanceof.App\\Controller\\ListarLibrosBiliotecaController' => true,
-<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
 ========
+    '.abstract.instanceof.App\\Controller\\EditarBibliotecaController' => true,
+    '.abstract.instanceof.App\\Controller\\EditarLibroController' => true,
+    '.abstract.instanceof.App\\Controller\\InsertarBibliotecaController' => true,
+    '.abstract.instanceof.App\\Controller\\ListarBibliotecasController' => true,
+    '.abstract.instanceof.App\\Controller\\ListarLibrosBibliotecaController' => true,
     '.abstract.instanceof.App\\DataFixtures\\AppFixtures' => true,
-    '.abstract.instanceof.App\\Form\\BuscarBibliotecaCiudadFormType' => true,
-    '.abstract.instanceof.App\\Form\\BuscarBibliotecaNombreFormType' => true,
-    '.abstract.instanceof.App\\Form\\BuscarLibroAutorBibliotecaFormType' => true,
-    '.abstract.instanceof.App\\Form\\BuscarLibroEditorialBibliotecaFormType' => true,
-    '.abstract.instanceof.App\\Form\\BuscarLibroTituloBibliotecaFormType' => true,
-    '.abstract.instanceof.App\\Form\\BuscarLibroTituloDisponibilidadFormType' => true,
-    '.abstract.instanceof.App\\Form\\BuscarLibroTituloFormType' => true,
+    '.abstract.instanceof.App\\Form\\AnadirNuevoLibroFormType' => true,
+    '.abstract.instanceof.App\\Form\\EditarBibliotecaType' => true,
     '.abstract.instanceof.App\\Form\\EditarLibroType' => true,
-    '.abstract.instanceof.App\\Form\\ListarLibrosBibliotecaFormType' => true,
+    '.abstract.instanceof.App\\Form\\InsertarBibliotecaFormType' => true,
     '.abstract.instanceof.App\\Repository\\BibliotecaRepository' => true,
     '.abstract.instanceof.App\\Repository\\LibroRepository' => true,
->>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerPYNm3tb/removed-ids.php
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerSO4lYH1/removed-ids.php
     '.cache_connection.GD_MSZC' => true,
     '.cache_connection.JKE6keX' => true,
     '.console.command.about.lazy' => true,
@@ -99,21 +98,9 @@ return [
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\BuscarLibroTituloController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
-    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\EditarLibroController' => true,
+<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ListarBibliotecasController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ListarLibrosBiliotecaController' => true,
-<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
-========
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarBibliotecaCiudadFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarBibliotecaNombreFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarLibroAutorBibliotecaFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarLibroEditorialBibliotecaFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarLibroTituloBibliotecaFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarLibroTituloDisponibilidadFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\BuscarLibroTituloFormType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\EditarLibroType' => true,
-    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\ListarLibrosBibliotecaFormType' => true,
->>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerPYNm3tb/removed-ids.php
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarBiliotecaCiudadController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarBiliotecaNombreController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroAutorBiliotecaController' => true,
@@ -121,7 +108,28 @@ return [
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+========
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\EditarBibliotecaController' => true,
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\EditarLibroController' => true,
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\InsertarBibliotecaController' => true,
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ListarBibliotecasController' => true,
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ListarLibrosBibliotecaController' => true,
+    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\AnadirNuevoLibroFormType' => true,
+    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\EditarBibliotecaType' => true,
+    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\EditarLibroType' => true,
+    '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\InsertarBibliotecaFormType' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\AnadirNuevoLibroController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarBibliotecaCiudadController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarBibliotecaNombreController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroAutorBibliotecaController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroEditorialBibliotecaController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloBibliotecaController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\EditarBibliotecaController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\EditarLibroController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\InsertarBibliotecaController' => true,
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerSO4lYH1/removed-ids.php
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\ListarBibliotecasController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\ListarLibrosBiliotecaController' => true,
     '.maker.auto_command.make_auth.lazy' => true,
@@ -164,19 +172,15 @@ return [
     '.service_locator.HxfGI0d' => true,
 >>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerSO4lYH1/removed-ids.php
     '.service_locator.KLVvNIq' => true,
+    '.service_locator.L.EDYUC' => true,
     '.service_locator.LMuqDDe' => true,
     '.service_locator.NBUFN6A' => true,
-    '.service_locator.Nje38sR' => true,
     '.service_locator.PvoQzFT' => true,
     '.service_locator.PvoQzFT.router.default' => true,
     '.service_locator.XN.uUje' => true,
     '.service_locator.XXv1IfR' => true,
     '.service_locator.Xbsa8iG' => true,
-<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
     '.service_locator.YMnfGOP' => true,
-========
-    '.service_locator.b91Hub3' => true,
->>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerPYNm3tb/removed-ids.php
     '.service_locator.bJ.4HC5' => true,
     '.service_locator.cUcW89y' => true,
     '.service_locator.cUcW89y.router.cache_warmer' => true,
@@ -192,20 +196,18 @@ return [
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroTituloBiliotecaController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroTituloController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\BuscarLibroTituloDisponibilidadController' => true,
+<<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
+========
+    '.service_locator.jUv.zyj.App\\Controller\\EditarBibliotecaController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\EditarLibroController' => true,
+    '.service_locator.jUv.zyj.App\\Controller\\InsertarBibliotecaController' => true,
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerSO4lYH1/removed-ids.php
     '.service_locator.jUv.zyj.App\\Controller\\ListarBibliotecasController' => true,
     '.service_locator.jUv.zyj.App\\Controller\\ListarLibrosBiliotecaController' => true,
-    '.service_locator.kqGXT5k' => true,
     '.service_locator.lLv4pWF' => true,
 <<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
     '.service_locator.qoUWBxK' => true,
     '.service_locator.u6DWx23' => true,
-========
-    '.service_locator.neWg8d7' => true,
-    '.service_locator.s4CQdeT' => true,
-    '.service_locator.u6DWx23' => true,
-    '.service_locator.xMmAq56' => true,
->>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerPYNm3tb/removed-ids.php
     '.service_locator.y4_Zrx.' => true,
 ========
     '.service_locator.neWg8d7' => true,
@@ -221,18 +223,13 @@ return [
     'App\\Entity' => true,
 <<<<<<<< Updated upstream:ProyectoSymfony/var/cache/dev/ContainerGx2YOkN/removed-ids.php
 ========
-    'App\\Form\\BuscarBibliotecaCiudadFormType' => true,
-    'App\\Form\\BuscarBibliotecaNombreFormType' => true,
-    'App\\Form\\BuscarLibroAutorBibliotecaFormType' => true,
-    'App\\Form\\BuscarLibroEditorialBibliotecaFormType' => true,
-    'App\\Form\\BuscarLibroTituloBibliotecaFormType' => true,
-    'App\\Form\\BuscarLibroTituloDisponibilidadFormType' => true,
-    'App\\Form\\BuscarLibroTituloFormType' => true,
+    'App\\Form\\AnadirNuevoLibroFormType' => true,
+    'App\\Form\\EditarBibliotecaType' => true,
     'App\\Form\\EditarLibroType' => true,
-    'App\\Form\\ListarLibrosBibliotecaFormType' => true,
+    'App\\Form\\InsertarBibliotecaFormType' => true,
     'App\\Repository\\BibliotecaRepository' => true,
     'App\\Repository\\LibroRepository' => true,
->>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerPYNm3tb/removed-ids.php
+>>>>>>>> Stashed changes:ProyectoSymfony/var/cache/dev/ContainerSO4lYH1/removed-ids.php
     'Doctrine\\Bundle\\DoctrineBundle\\Controller\\ProfilerController' => true,
     'Doctrine\\Bundle\\DoctrineBundle\\Dbal\\ManagerRegistryAwareConnectionProvider' => true,
     'Doctrine\\Common\\Persistence\\ManagerRegistry' => true,
