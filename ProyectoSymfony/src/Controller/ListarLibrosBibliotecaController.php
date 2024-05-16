@@ -54,5 +54,19 @@ class ListarLibrosBibliotecaController extends AbstractController
             'bibliotecas' => $bibliotecas,
             'biblioteca' => $biblioteca,
         ]);
+        
+    }
+
+    #[Route('/borrar/libro/{id}', name: 'borrar_libro', methods: ['POST'])]
+    public function borrarLibro(Request $request, int $id): Response
+    {
+        
+        $libro = $this->em->getRepository(Libro::class)->find($id);
+        if ($libro) {
+            $this->em->remove($libro);
+            $this->em->flush();
+        }
+    
+        return $this->redirectToRoute('listar_libros_biblioteca', ['biblioteca' => $request->request->get('biblioteca_id')]);
     }
 }

@@ -130,19 +130,29 @@ class __TwigTemplate_79237ec7b7d417d2f898d9377f688a29 extends Template
             // line 26
             yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "autor", [], "any", false, false, false, 26), "html", null, true);
             yield "</p>
+                <form action=\"";
+            // line 27
+            yield Twig\Extension\EscaperExtension::escape($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("borrar_libro", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            yield "\" method=\"post\">
+                        <input type=\"hidden\" name=\"biblioteca_id\" value=\"";
+            // line 28
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, (isset($context["biblioteca"]) || array_key_exists("biblioteca", $context) ? $context["biblioteca"] : (function () { throw new RuntimeError('Variable "biblioteca" does not exist.', 28, $this->source); })()), "id", [], "any", false, false, false, 28), "html", null, true);
+            yield "\">
+                        <button type=\"submit\" class=\"btn btn-danger\">Borrar</button>
+                    </form>
             </li>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 29
+            // line 33
             yield "            <li>No hay libros disponibles.</li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['libro'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 35
         yield "    </ul>
 ";
         
@@ -172,7 +182,7 @@ class __TwigTemplate_79237ec7b7d417d2f898d9377f688a29 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  146 => 31,  139 => 29,  131 => 26,  127 => 25,  124 => 24,  119 => 23,  115 => 21,  111 => 19,  105 => 17,  103 => 16,  97 => 12,  86 => 10,  82 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  156 => 35,  149 => 33,  139 => 28,  135 => 27,  131 => 26,  127 => 25,  124 => 24,  119 => 23,  115 => 21,  111 => 19,  105 => 17,  103 => 16,  97 => 12,  86 => 10,  82 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -203,6 +213,10 @@ class __TwigTemplate_79237ec7b7d417d2f898d9377f688a29 extends Template
             <li>
                 <h2>{{ libro.titulo }}</h2>
                 <p>{{ libro.autor }}</p>
+                <form action=\"{{ path('borrar_libro', {'id': libro.id}) }}\" method=\"post\">
+                        <input type=\"hidden\" name=\"biblioteca_id\" value=\"{{ biblioteca.id }}\">
+                        <button type=\"submit\" class=\"btn btn-danger\">Borrar</button>
+                    </form>
             </li>
         {% else %}
             <li>No hay libros disponibles.</li>

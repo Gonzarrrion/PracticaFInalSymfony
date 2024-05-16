@@ -24,6 +24,10 @@
             <li>
                 <h2>{{ libro.titulo }}</h2>
                 <p>{{ libro.autor }}</p>
+                <form action="{{ path('borrar_libro', {'id': libro.id}) }}" method="post">
+                        <input type="hidden" name="biblioteca_id" value="{{ biblioteca.id }}">
+                        <button type="submit" class="btn btn-danger">Borrar</button>
+                    </form>
             </li>
         {% else %}
             <li>No hay libros disponibles.</li>
