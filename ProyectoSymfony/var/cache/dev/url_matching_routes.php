@@ -17,9 +17,13 @@ return [
         '/buscar/libro/titulo/biblioteca' => [[['_route' => 'buscar_libro_titulo_biblioteca', '_controller' => 'App\\Controller\\BuscarLibroTituloBibliotecaController::index'], null, null, null, false, false, null]],
         '/buscar/libro/titulo' => [[['_route' => 'buscar_libro_titulo', '_controller' => 'App\\Controller\\BuscarLibroTituloController::index'], null, null, null, false, false, null]],
         '/buscar/libro/titulo/disponibilidad' => [[['_route' => 'buscar_libro_titulo_disponibilidad', '_controller' => 'App\\Controller\\BuscarLibroTituloDisponibilidadController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_default', '_controller' => 'App\\Controller\\DefaultController::index'], null, null, null, false, false, null]],
+        '/funcionalidades' => [[['_route' => 'funcionalidades', '_controller' => 'App\\Controller\\FuncionalidadesController::index'], null, null, null, false, false, null]],
+        '/inicio' => [[['_route' => 'inicio', '_controller' => 'App\\Controller\\InicioController::index'], null, null, null, false, false, null]],
         '/insertar/biblioteca' => [[['_route' => 'insertar_biblioteca', '_controller' => 'App\\Controller\\InsertarBibliotecaController::index'], null, null, null, false, false, null]],
         '/listar/bibliotecas' => [[['_route' => 'listar_bibliotecas', '_controller' => 'App\\Controller\\ListarBibliotecasController::index'], null, null, null, false, false, null]],
         '/listar/libros/biblioteca' => [[['_route' => 'listar_libros_biblioteca', '_controller' => 'App\\Controller\\ListarLibrosBibliotecaController::index'], null, null, null, false, false, null]],
+        '/busqueda' => [[['_route' => 'metodos_busqueda', '_controller' => 'App\\Controller\\MetodosBusquedaController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

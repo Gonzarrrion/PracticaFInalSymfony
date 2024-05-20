@@ -175,6 +175,6 @@ class __TwigTemplate_ddf0e7647b96ed5d0a62d9cd9da353a2 extends Template
             <li>No hay bibliotecas disponibles.</li>
         {% endfor %}
     </ul>
-{% endblock %}", "buscar_biblioteca_ciudad/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_biblioteca_ciudad/index.html.twig");
+{% endblock %}", "buscar_biblioteca_ciudad/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_biblioteca_ciudad/index.html.twig");
     }
 }

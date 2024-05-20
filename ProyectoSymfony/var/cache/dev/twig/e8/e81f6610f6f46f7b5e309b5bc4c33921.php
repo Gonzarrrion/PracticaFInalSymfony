@@ -102,11 +102,11 @@ class __TwigTemplate_504a82c8f58be70785ec5f3e5cfee72c extends Template
             yield "</p>
                 <p>";
             // line 19
-            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "biblioteca", [], "any", false, false, false, 19), "nombre", [], "any", false, false, false, 19), "html", null, true);
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "isbn", [], "any", false, false, false, 19), "html", null, true);
             yield "</p>
                 <p>";
             // line 20
-            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "isbn", [], "any", false, false, false, 20), "html", null, true);
+            yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["libro"], "biblioteca", [], "any", false, false, false, 20), "nombre", [], "any", false, false, false, 20), "html", null, true);
             yield "</p>
             </li>
         ";
@@ -173,13 +173,13 @@ class __TwigTemplate_504a82c8f58be70785ec5f3e5cfee72c extends Template
             <li>
                 <h2>{{ libro.titulo }}</h2>
                 <p>{{ libro.autor }}</p>
-                <p>{{ libro.biblioteca.nombre }}</p>
                 <p>{{ libro.isbn }}</p>
+                <p>{{ libro.biblioteca.nombre }}</p>
             </li>
         {% else %}
             <li>No hay libros disponibles.</li>
         {% endfor %}
     </ul>
-{% endblock %}", "buscar_libro_titulo/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo/index.html.twig");
+{% endblock %}", "buscar_libro_titulo/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo/index.html.twig");
     }
 }

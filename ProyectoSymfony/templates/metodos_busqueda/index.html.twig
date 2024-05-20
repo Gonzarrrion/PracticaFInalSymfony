@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Métodos de Búsqueda{% endblock %}
+
+{% block body %}
+
+
+<style>
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start; 
+        gap: 10px; 
+        margin-top: 20px;
+    }
+
+</style>
+
+
+
+<h1>Métodos de Búsqueda</h1>
+<div class="btn-container">
+    <a href="{{ path('buscar_biblioteca_ciudad') }}" class="btn btn-primary">Buscar Biblioteca por Ciudad</a>
+    <a href="{{ path('buscar_biblioteca_nombre') }}" class="btn btn-primary">Buscar Biblioteca por Nombre</a>
+    <a href="{{ path('buscar_libro_autor_biblioteca') }}" class="btn btn-primary">Buscar Libro por Autor en Biblioteca</a>
+    <a href="{{ path('buscar_libro_editorial_biblioteca') }}" class="btn btn-primary">Buscar Libro por Editorial en Biblioteca</a>
+    <a href="{{ path('buscar_libro_titulo_biblioteca') }}" class="btn btn-primary">Buscar Libro por Título en Biblioteca</a>
+    <a href="{{ path('buscar_libro_titulo') }}" class="btn btn-primary">Buscar Libro por Título</a>
+    <a href="{{ path('buscar_libro_titulo_disponibilidad') }}" class="btn btn-primary">Buscar Libro por Título y Disponibilidad</a>
+    <a href="{{ path('listar_bibliotecas') }}" class="btn btn-info">Listar Todas las Bibliotecas</a>
+    <a href="{{ path('listar_libros_biblioteca') }}" class="btn btn-info">Listar Libros en Biblioteca</a>
+</div>
+{% endblock %}

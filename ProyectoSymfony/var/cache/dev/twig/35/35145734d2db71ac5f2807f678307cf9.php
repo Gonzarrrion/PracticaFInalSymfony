@@ -177,6 +177,6 @@ class __TwigTemplate_8879d30ba55bae323db6ee2e0bdc5e70 extends Template
     {% else %}
         <p>No se encontraron libros.</p>
     {% endfor %}
-{% endblock %}", "buscar_libro_titulo_disponibilidad/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_disponibilidad/index.html.twig");
+{% endblock %}", "buscar_libro_titulo_disponibilidad/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_disponibilidad/index.html.twig");
     }
 }

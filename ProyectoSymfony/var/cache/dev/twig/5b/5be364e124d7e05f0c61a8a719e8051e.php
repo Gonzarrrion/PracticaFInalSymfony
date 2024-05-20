@@ -136,6 +136,6 @@ class __TwigTemplate_971df6bf852f44c66c4fe27048d0edfa extends Template
     {{ form_end(form) }}
 </div>
 {% endblock %}
-", "anadir_nuevo_libro/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/anadir_nuevo_libro/index.html.twig");
+", "anadir_nuevo_libro/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/anadir_nuevo_libro/index.html.twig");
     }
 }

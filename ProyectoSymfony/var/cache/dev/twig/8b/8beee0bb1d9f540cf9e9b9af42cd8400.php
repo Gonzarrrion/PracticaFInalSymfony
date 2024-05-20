@@ -137,6 +137,6 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
 
 
 {% endblock %}
-", "insertar_biblioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/insertar_biblioteca/index.html.twig");
+", "insertar_biblioteca/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/insertar_biblioteca/index.html.twig");
     }
 }

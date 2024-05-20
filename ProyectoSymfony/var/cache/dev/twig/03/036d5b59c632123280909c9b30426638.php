@@ -2230,6 +2230,6 @@ $context["attrvalue"] === false)) {
         {%- endif -%}
     {%- endfor -%}
 {%- endblock attributes -%}
-", "form_div_layout.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/vendor/symfony/twig-bridge/Resources/views/Form/form_div_layout.html.twig");
+", "form_div_layout.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/vendor/symfony/twig-bridge/Resources/views/Form/form_div_layout.html.twig");
     }
 }

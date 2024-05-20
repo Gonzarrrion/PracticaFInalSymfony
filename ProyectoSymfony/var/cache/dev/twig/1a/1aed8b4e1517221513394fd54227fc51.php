@@ -181,6 +181,6 @@ class __TwigTemplate_670285e0d227df84b23e8933d314b5d5 extends Template
         {% endfor %}
     </ul>
 {% endif %}
-{% endblock %}", "buscar_libro_editorial_biblioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_editorial_biblioteca/index.html.twig");
+{% endblock %}", "buscar_libro_editorial_biblioteca/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_editorial_biblioteca/index.html.twig");
     }
 }
