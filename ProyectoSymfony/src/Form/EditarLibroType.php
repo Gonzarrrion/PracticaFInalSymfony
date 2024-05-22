@@ -69,7 +69,7 @@ class EditarLibroType extends AbstractType
                         'message' => 'El número de ejemplares no puede estar vacío.',
                     ]),
                     new Assert\Type([
-                        'type' => 'integer',
+                        'type' => 'number',
                         'message' => 'El número de ejemplares debe ser entero.',
                     ]),
                     new Assert\Positive([
