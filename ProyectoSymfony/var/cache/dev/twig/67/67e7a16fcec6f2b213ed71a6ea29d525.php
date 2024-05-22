@@ -101,20 +101,29 @@ class __TwigTemplate_a4906af284c37a204eef512c6ef7672d extends Template
     </div>
 
     <h2>Editar Libro</h2>
-    <p>Para editar un libro, dirigete a la URL: <code>";
-        // line 17
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editar_libro", ["id" => "ID_DEL_LIBRO"]);
-        yield "</code></p>
-    <p>Reemplaza <code>ID_DEL_LIBRO</code> con el ID del libro que deseas editar.</p>
+    <form class=\"form\" id=\"editarLibroForm\" onsubmit=\"event.preventDefault(); editar('libro');\">
+        <label class=\"labels\" for=\"libroId\">ID del libro:</label>
+        <input class=\"inputs\" type=\"number\" id=\"libroId\" name=\"id\" placeholder=\"ID del libro\" required min=\"1\">
+        <button type=\"submit\" class=\"btn btn-primary\">Editar</button>
+    </form>
 
     <h2>Editar Biblioteca</h2>
-    <p>Para editar una biblioteca, dirigete a la URL: <code>";
-        // line 21
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editar_biblioteca", ["id" => "ID_DE_LA_BIBLIOTECA"]);
-        yield "</code></p>
-    <p>Reemplaza <code>ID_DE_LA_BIBLIOTECA</code> con el ID de la biblioteca que deseas editar.</p>
-
+    <form class=\"form\" id=\"editarBibliotecaForm\" onsubmit=\"event.preventDefault(); editar('biblioteca');\">
+        <label class=\"labels\" for=\"bibliotecaId\">ID de la biblioteca:</label>
+        <input class=\"inputs\" type=\"number\" id=\"bibliotecaId\" name=\"id\" placeholder=\"ID de la biblioteca\" required min=\"1\">
+        <button type=\"submit\" class=\"btn btn-primary\">Editar</button>
+    </form>
 </div>
+<script>
+function editar(tipo) {
+    var id = document.getElementById(tipo + 'Id').value;
+    if (id <= 0 || isNaN(id)) {
+        alert('Por favor, introduce un número entero positivo.');
+        return;
+    }
+    window.location.href = '/editar/' + tipo + '/' + id;
+}
+</script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -143,7 +152,7 @@ class __TwigTemplate_a4906af284c37a204eef512c6ef7672d extends Template
      */
     public function getDebugInfo()
     {
-        return array (  113 => 21,  106 => 17,  99 => 13,  95 => 12,  92 => 11,  83 => 9,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  99 => 13,  95 => 12,  92 => 11,  83 => 9,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -164,15 +173,30 @@ class __TwigTemplate_a4906af284c37a204eef512c6ef7672d extends Template
     </div>
 
     <h2>Editar Libro</h2>
-    <p>Para editar un libro, dirigete a la URL: <code>{{ path('editar_libro', {'id': 'ID_DEL_LIBRO'}) }}</code></p>
-    <p>Reemplaza <code>ID_DEL_LIBRO</code> con el ID del libro que deseas editar.</p>
+    <form class=\"form\" id=\"editarLibroForm\" onsubmit=\"event.preventDefault(); editar('libro');\">
+        <label class=\"labels\" for=\"libroId\">ID del libro:</label>
+        <input class=\"inputs\" type=\"number\" id=\"libroId\" name=\"id\" placeholder=\"ID del libro\" required min=\"1\">
+        <button type=\"submit\" class=\"btn btn-primary\">Editar</button>
+    </form>
 
     <h2>Editar Biblioteca</h2>
-    <p>Para editar una biblioteca, dirigete a la URL: <code>{{ path('editar_biblioteca', {'id': 'ID_DE_LA_BIBLIOTECA'}) }}</code></p>
-    <p>Reemplaza <code>ID_DE_LA_BIBLIOTECA</code> con el ID de la biblioteca que deseas editar.</p>
-
+    <form class=\"form\" id=\"editarBibliotecaForm\" onsubmit=\"event.preventDefault(); editar('biblioteca');\">
+        <label class=\"labels\" for=\"bibliotecaId\">ID de la biblioteca:</label>
+        <input class=\"inputs\" type=\"number\" id=\"bibliotecaId\" name=\"id\" placeholder=\"ID de la biblioteca\" required min=\"1\">
+        <button type=\"submit\" class=\"btn btn-primary\">Editar</button>
+    </form>
 </div>
+<script>
+function editar(tipo) {
+    var id = document.getElementById(tipo + 'Id').value;
+    if (id <= 0 || isNaN(id)) {
+        alert('Por favor, introduce un número entero positivo.');
+        return;
+    }
+    window.location.href = '/editar/' + tipo + '/' + id;
+}
+</script>
 {% endblock %}
-", "funcionalidades/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/funcionalidades/index.html.twig");
+", "funcionalidades/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/funcionalidades/index.html.twig");
     }
 }
