@@ -26,6 +26,9 @@ class InsertarBibliotecaController extends AbstractController
             // Vaciar formulario por si queremos añadir otra biblioteca
             $biblioteca = new Biblioteca();
             $form = $this->createForm(InsertarBibliotecaFormType::class, $biblioteca);
+
+            // Redirigir a funcionalidades
+            return $this->redirectToRoute('funcionalidades');
         }
         return $this->render('insertar_biblioteca/index.html.twig', [
             'form' => $form->createView(),

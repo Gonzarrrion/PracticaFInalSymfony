@@ -24,7 +24,8 @@ class AnadirNuevoLibroController extends AbstractController
             $entityManager->flush();
 
         
-            return $this->redirectToRoute('anadir_nuevo_libro'); // por si quieres añadir mas 
+            // Redirigir a funcionalidades
+            return $this->redirectToRoute('funcionalidades');
         }
 
         return $this->render('anadir_nuevo_libro/index.html.twig', [

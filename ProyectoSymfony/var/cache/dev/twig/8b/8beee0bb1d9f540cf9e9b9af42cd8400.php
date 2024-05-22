@@ -112,34 +112,32 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
             yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'widget', ["attr" => ["class" => "form-control"]]);
             yield "</div>
 
-
-
             ";
-            // line 35
-            if (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["child"], "vars", [], "any", false, false, false, 35), "errors", [], "any", false, false, false, 35)) {
-                // line 36
+            // line 33
+            if (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["child"], "vars", [], "any", false, false, false, 33), "errors", [], "any", false, false, false, 33)) {
+                // line 34
                 yield "                <div class=\"error-message\">
 
                     ";
-                // line 38
+                // line 36
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["child"], "vars", [], "any", false, false, false, 38), "errors", [], "any", false, false, false, 38));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["child"], "vars", [], "any", false, false, false, 36), "errors", [], "any", false, false, false, 36));
                 foreach ($context['_seq'] as $context["_key"] => $context["error"]) {
-                    // line 39
+                    // line 37
                     yield "                        ";
-                    yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["error"], "message", [], "any", false, false, false, 39), "html", null, true);
+                    yield Twig\Extension\EscaperExtension::escape($this->env, CoreExtension::getAttribute($this->env, $this->source, $context["error"], "message", [], "any", false, false, false, 37), "html", null, true);
                     yield "
                     ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 41
+                // line 39
                 yield "
                 </div>
             ";
             }
-            // line 44
+            // line 42
             yield "
 
 
@@ -149,11 +147,11 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 47
         yield "    <button class=\"btn btn-primary\">Guardar Biblioteca</button>
     ";
-        // line 50
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
+        // line 48
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), 'form_end');
         yield "
 </div>
 ";
@@ -184,7 +182,7 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  156 => 50,  153 => 49,  143 => 44,  138 => 41,  129 => 39,  125 => 38,  121 => 36,  119 => 35,  112 => 31,  108 => 30,  105 => 29,  101 => 28,  97 => 27,  75 => 7,  68 => 6,  54 => 4,  37 => 2,);
+        return array (  154 => 48,  151 => 47,  141 => 42,  136 => 39,  127 => 37,  123 => 36,  119 => 34,  117 => 33,  112 => 31,  108 => 30,  105 => 29,  101 => 28,  97 => 27,  75 => 7,  68 => 6,  54 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -220,8 +218,6 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
         <div class=\"form-group\">
             {{ form_label(child) }}
             <div class=\"inputs\">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
-
-
 
             {% if child.vars.errors %}
                 <div class=\"error-message\">
