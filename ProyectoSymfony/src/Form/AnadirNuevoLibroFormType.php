@@ -21,7 +21,9 @@ class AnadirNuevoLibroFormType extends AbstractType
                 'constraints' => [
                     new Assert\NotBlank([
                         'message' => 'El título no puede estar vacío.',
-                    ])]])
+                    ])
+                ]
+            ])
             ->add('Autor', TextType::class, [
                 'constraints' => [
                     new Assert\NotBlank([
@@ -30,10 +32,14 @@ class AnadirNuevoLibroFormType extends AbstractType
                     new Assert\Regex([
                         'pattern' => '/^[^0-9]*$/',
                         'message' => 'El autor no puede contener números.',
-                    ])]])
+                    ])
+                ]
+            ])
             ->add('Sinopsis', TextType::class, [
                 'constraints' => new Assert\NotBlank([
-                    'message' => 'La sinopsis no puede estar vacía.',])])
+                    'message' => 'La sinopsis no puede estar vacía.',
+                ])
+            ])
             ->add('AnoPublicacion', DateType::class, [
                 'widget' => 'single_text',
                 'constraints' => new Assert\NotBlank([
@@ -57,9 +63,18 @@ class AnadirNuevoLibroFormType extends AbstractType
                 ]
             ])
             ->add('NumEjemplares', null, [
-                'constraints' => new Assert\NotBlank([
-                    'message' => 'El número de ejemplares no puede estar vacío.',
-                ])
+                'constraints' => [
+                    new Assert\NotBlank([
+                        'message' => 'El número de ejemplares no puede estar vacío.',
+                    ]),
+                    new Assert\Type([
+                        'type' => 'integer',
+                        'message' => 'El número de ejemplares debe ser entero.',
+                    ]),
+                    new Assert\Positive([
+                        'message' => 'El número de ejemplares debe ser positivo.',
+                    ])
+                ]
             ])
             ->add('Biblioteca', EntityType::class, [
                 'class' => Biblioteca::class,

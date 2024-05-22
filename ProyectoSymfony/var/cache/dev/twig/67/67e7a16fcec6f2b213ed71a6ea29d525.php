@@ -197,6 +197,6 @@ function editar(tipo) {
 }
 </script>
 {% endblock %}
-", "funcionalidades/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/funcionalidades/index.html.twig");
+", "funcionalidades/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/funcionalidades/index.html.twig");
     }
 }
