@@ -4,6 +4,7 @@
 {% block title %}Añadir Nueva Biblioteca{% endblock %}
 
 {% block body %}
+
 <style>
     .form-group {
         display: flex;
@@ -20,6 +21,7 @@
         margin-top: 5px; 
     }
 </style>
+
 <div class="container">
     <h1>Añadir una nueva Biblioteca</h1>
     {{ form_start(form, {'attr': {'class': 'form'}}) }}
@@ -27,13 +29,21 @@
         <div class="form-group">
             {{ form_label(child) }}
             <div class="inputs">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+
+
+
             {% if child.vars.errors %}
                 <div class="error-message">
+
                     {% for error in child.vars.errors %}
                         {{ error.message }}
                     {% endfor %}
+
                 </div>
             {% endif %}
+
+
+
         </div>
     {% endfor %}
     <button class="btn btn-primary">Guardar Biblioteca</button>
