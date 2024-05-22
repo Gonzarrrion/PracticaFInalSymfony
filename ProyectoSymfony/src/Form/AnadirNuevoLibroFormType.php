@@ -51,7 +51,7 @@ class AnadirNuevoLibroFormType extends AbstractType
                         'message' => 'El ISBN no puede estar vacío.',
                     ]),
                     new Assert\Regex([
-                        'pattern' => '/^[0-9]+(-[0-9]+)*$/',
+                        'pattern' => '/^[0-9]+-[0-9]+-[0-9]+-[0-9]+$/',
                         'message' => 'El formato del ISBN no es válido.',
                     ])
                 ]
