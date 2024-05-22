@@ -130,6 +130,6 @@ class __TwigTemplate_a76405dee3a0e46d7887d4e4db423e85 extends Template
             <a href=\"{{ path('funcionalidades') }}\" class=\"btn btn-secondary\">Funcionalidades</a>
         </div>
     </div>
-{% endblock %}", "inicio/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/inicio/index.html.twig");
+{% endblock %}", "inicio/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/inicio/index.html.twig");
     }
 }

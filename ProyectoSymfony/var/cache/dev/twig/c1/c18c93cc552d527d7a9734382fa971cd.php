@@ -206,6 +206,6 @@ class __TwigTemplate_75f17a31592c0adb83221c3423984f37 extends Template
 </div>
 </div>
 {% endblock %}
-", "metodos_busqueda/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/metodos_busqueda/index.html.twig");
+", "metodos_busqueda/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/metodos_busqueda/index.html.twig");
     }
 }

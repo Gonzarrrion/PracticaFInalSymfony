@@ -219,6 +219,6 @@ div {
         {% endfor %}
     </ul>
 </div>
-{% endblock %}", "buscar_biblioteca_ciudad/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_biblioteca_ciudad/index.html.twig");
+{% endblock %}", "buscar_biblioteca_ciudad/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_biblioteca_ciudad/index.html.twig");
     }
 }

@@ -232,6 +232,6 @@ h2{
         {% endfor %}
     </ul>
 </div>
-{% endblock %}", "buscar_libro_titulo/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo/index.html.twig");
+{% endblock %}", "buscar_libro_titulo/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo/index.html.twig");
     }
 }

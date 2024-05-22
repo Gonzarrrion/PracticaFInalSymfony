@@ -266,6 +266,6 @@ div {
     </ul>
 </div>
 {% endblock %}
-", "listar_libros_biblioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/listar_libros_biblioteca/index.html.twig");
+", "listar_libros_biblioteca/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/listar_libros_biblioteca/index.html.twig");
     }
 }

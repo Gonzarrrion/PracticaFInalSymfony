@@ -1,3 +1,4 @@
+
 {% extends 'base.html.twig' %}
 
 {% block title %}Añadir Nueva Biblioteca{% endblock %}
@@ -6,23 +7,35 @@
 <style>
     .form-group {
         display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        margin-bottom: 10px;
+        flex-direction: column;  
+        align-items: start;
+        margin-bottom: 15px;
+    }
+    .form-group .inputs {
+        margin-top: 5px;
+    }
+    .error-message {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px; 
     }
 </style>
 <div class="container">
-
-    <h1>Añadir un nueva Biblioteca</h1>
-
+    <h1>Añadir una nueva Biblioteca</h1>
     {{ form_start(form, {'attr': {'class': 'form'}}) }}
     {% for child in form %}
-            <div class="form-group">
-                <label class="labels">{{ form_label(child) }}</label>
-                <div class="inputs">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
-            </div>
-        {% endfor %}
+        <div class="form-group">
+            {{ form_label(child) }}
+            <div class="inputs">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+            {% if child.vars.errors %}
+                <div class="error-message">
+                    {% for error in child.vars.errors %}
+                        {{ error.message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
     <button class="btn btn-primary">Guardar Biblioteca</button>
     {{ form_end(form) }}
 </div>

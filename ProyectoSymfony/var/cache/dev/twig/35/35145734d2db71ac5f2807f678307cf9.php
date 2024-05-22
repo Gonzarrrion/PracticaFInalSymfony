@@ -219,6 +219,6 @@ div {
         <p>No se encontraron libros.</p>
     {% endfor %}
 </div>
-{% endblock %}", "buscar_libro_titulo_disponibilidad/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_disponibilidad/index.html.twig");
+{% endblock %}", "buscar_libro_titulo_disponibilidad/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/buscar_libro_titulo_disponibilidad/index.html.twig");
     }
 }
