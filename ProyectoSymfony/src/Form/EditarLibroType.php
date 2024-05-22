@@ -9,6 +9,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -62,7 +63,7 @@ class EditarLibroType extends AbstractType
                     ])
                 ]
             ])
-            ->add('NumEjemplares', null, [
+            ->add('NumEjemplares', NumberType::class, [
                 'constraints' => [
                     new Assert\NotBlank([
                         'message' => 'El número de ejemplares no puede estar vacío.',
