@@ -72,15 +72,24 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<div class=\"container\">
+        yield "<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
+<div class=\"container\">
     <h1>Editar Biblioteca</h1>
 
     ";
-        // line 9
+        // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "flashes", ["error"], "method", false, false, false, 9));
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "flashes", ["error"], "method", false, false, false, 18));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 10
+            // line 19
             yield "        <div class=\"alert alert-danger\">";
             yield Twig\Extension\EscaperExtension::escape($this->env, $context["message"], "html", null, true);
             yield "</div>
@@ -89,27 +98,47 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 12
+        // line 21
         yield "
     ";
-        // line 13
+        // line 22
         if (array_key_exists("form", $context)) {
-            // line 14
+            // line 23
             yield "        ";
-            yield             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
+            yield             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
             yield "
+        
         ";
-            // line 15
-            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'widget');
-            yield "
+            // line 25
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
+                // line 26
+                yield "            <div class=\"form-group\">
+                <label class=\"labels\">";
+                // line 27
+                yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'label');
+                yield "</label>
+                <div class=\"inputs\">";
+                // line 28
+                yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'widget', ["attr" => ["class" => "form-control"]]);
+                yield "</div>
+            </div>
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 31
+            yield "        
         <button class=\"btn btn-primary\">Actualizar Biblioteca</button>
 
         ";
-            // line 18
+            // line 34
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "flashes", ["success"], "method", false, false, false, 18));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "flashes", ["success"], "method", false, false, false, 34));
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 19
+                // line 35
                 yield "            <div class=\"alert alert-success\" style=\"margin-top: 20px;\">";
                 yield Twig\Extension\EscaperExtension::escape($this->env, $context["message"], "html", null, true);
                 yield "</div>
@@ -118,19 +147,19 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 21
+            // line 37
             yield "
         ";
-            // line 22
-            yield             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+            // line 38
+            yield             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 38, $this->source); })()), 'form_end');
             yield "
     ";
         } else {
-            // line 24
+            // line 40
             yield "        <p>No existe una biblioteca con el ID proporcionado.</p>
     ";
         }
-        // line 26
+        // line 42
         yield "</div>
 ";
         
@@ -160,7 +189,7 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  134 => 26,  130 => 24,  125 => 22,  122 => 21,  113 => 19,  109 => 18,  103 => 15,  98 => 14,  96 => 13,  93 => 12,  84 => 10,  80 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  163 => 42,  159 => 40,  154 => 38,  151 => 37,  142 => 35,  138 => 34,  133 => 31,  124 => 28,  120 => 27,  117 => 26,  113 => 25,  107 => 23,  105 => 22,  102 => 21,  93 => 19,  89 => 18,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -170,6 +199,15 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
 {% block title %}Editar Biblioteca{% endblock %}
 
 {% block body %}
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
 <div class=\"container\">
     <h1>Editar Biblioteca</h1>
 
@@ -178,8 +216,15 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
     {% endfor %}
 
     {% if form is defined %}
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
+        {{ form_start(form, {'attr': {'class': 'form'}}) }}
+        
+        {% for child in form %}
+            <div class=\"form-group\">
+                <label class=\"labels\">{{ form_label(child) }}</label>
+                <div class=\"inputs\">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+            </div>
+        {% endfor %}
+        
         <button class=\"btn btn-primary\">Actualizar Biblioteca</button>
 
         {% for message in app.flashes('success') %}
@@ -191,7 +236,6 @@ class __TwigTemplate_2b7f618198078ab169c8c0861f0dac51 extends Template
         <p>No existe una biblioteca con el ID proporcionado.</p>
     {% endif %}
 </div>
-{% endblock %}
-", "editar_biblioteca/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/editar_biblioteca/index.html.twig");
+{% endblock %}", "editar_biblioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/editar_biblioteca/index.html.twig");
     }
 }

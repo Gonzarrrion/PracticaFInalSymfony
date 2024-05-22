@@ -72,21 +72,49 @@ class __TwigTemplate_971df6bf852f44c66c4fe27048d0edfa extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<div class=\"container\">
+        yield "<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
+<div class=\"container\">
+
     <h1>Añadir un nuevo libro</h1>
 
     ";
-        // line 9
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
+        // line 19
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
         yield "
     ";
-        // line 10
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'widget');
-        yield "
-    <button class=\"btn btn-primary\">Guardar libro</button>
+        // line 20
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
+            // line 21
+            yield "            <div class=\"form-group\">
+                <label class=\"labels\">";
+            // line 22
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'label');
+            yield "</label>
+                <div class=\"inputs\">";
+            // line 23
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'widget', ["attr" => ["class" => "form-control"]]);
+            yield "</div>
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 26
+        yield "    <button class=\"btn btn-primary\">Guardar libro</button>
     ";
-        // line 12
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_end');
+        // line 27
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), 'form_end');
         yield "
 </div>
 ";
@@ -117,7 +145,7 @@ class __TwigTemplate_971df6bf852f44c66c4fe27048d0edfa extends Template
      */
     public function getDebugInfo()
     {
-        return array (  89 => 12,  84 => 10,  80 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  117 => 27,  114 => 26,  105 => 23,  101 => 22,  98 => 21,  94 => 20,  90 => 19,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -127,15 +155,30 @@ class __TwigTemplate_971df6bf852f44c66c4fe27048d0edfa extends Template
 {% block title %}Añadir Nuevo Libro{% endblock %}
 
 {% block body %}
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
 <div class=\"container\">
+
     <h1>Añadir un nuevo libro</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+    {% for child in form %}
+            <div class=\"form-group\">
+                <label class=\"labels\">{{ form_label(child) }}</label>
+                <div class=\"inputs\">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+            </div>
+        {% endfor %}
     <button class=\"btn btn-primary\">Guardar libro</button>
     {{ form_end(form) }}
 </div>
 {% endblock %}
-", "anadir_nuevo_libro/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/anadir_nuevo_libro/index.html.twig");
+", "anadir_nuevo_libro/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/anadir_nuevo_libro/index.html.twig");
     }
 }

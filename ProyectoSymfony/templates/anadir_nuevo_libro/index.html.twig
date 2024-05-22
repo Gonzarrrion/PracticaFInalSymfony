@@ -3,11 +3,26 @@
 {% block title %}Añadir Nuevo Libro{% endblock %}
 
 {% block body %}
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
 <div class="container">
+
     <h1>Añadir un nuevo libro</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+    {% for child in form %}
+            <div class="form-group">
+                <label class="labels">{{ form_label(child) }}</label>
+                <div class="inputs">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+            </div>
+        {% endfor %}
     <button class="btn btn-primary">Guardar libro</button>
     {{ form_end(form) }}
 </div>

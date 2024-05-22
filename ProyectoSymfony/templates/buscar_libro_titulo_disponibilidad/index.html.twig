@@ -3,12 +3,31 @@
 {% block title %}Buscar libros{% endblock %}
 
 {% block body %}
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+             
+li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+div {
+    margin-bottom: 1em;
+}
+.inputs{
+    margin-right: 20px;
+}
+</style>
+<div class="container">
     <h1>Buscar libros por Título y Disponibilidad</h1>
 
-    <form action="{{ path('buscar_libro_titulo_disponibilidad') }}" method="post">
-        <label for="titulo">Título del libro:</label>
-        <input type="text" id="titulo" name="titulo" required>
-        <input type="submit" value="Buscar">
+    <form class="form" action="{{ path('buscar_libro_titulo_disponibilidad') }}" method="post">
+        <label class="labels" for="titulo">Título del libro:</label>
+        <input class="inputs" type="text" id="titulo" name="titulo" required>
+        <input class="btn-primary btn" type="submit" value="Buscar">
     </form>
     
     {% for titulo, bibliotecas in libros %}
@@ -20,4 +39,5 @@
     {% else %}
         <p>No se encontraron libros.</p>
     {% endfor %}
+</div>
 {% endblock %}

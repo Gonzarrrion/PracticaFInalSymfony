@@ -28,9 +28,6 @@ class __TwigTemplate_2201fb3facf7d656dacf26871294574f extends Template
         $this->parent = false;
 
         $this->blocks = [
-            'title' => [$this, 'block_title'],
-            'stylesheets' => [$this, 'block_stylesheets'],
-            'javascripts' => [$this, 'block_javascripts'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -45,27 +42,82 @@ class __TwigTemplate_2201fb3facf7d656dacf26871294574f extends Template
         yield "<!DOCTYPE html>
 <html>
     <head>
-        <meta charset=\"UTF-8\">
-        <title>";
-        // line 5
-        yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
-        yield "</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
-        ";
-        // line 7
-        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
-        // line 9
-        yield "
-        ";
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-image: url('";
         // line 10
-        yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        // line 12
-        yield "    </head>
+        yield Twig\Extension\EscaperExtension::escape($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Imagenes/fondo.avif"), "html", null, true);
+        yield "');
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+            }
+
+            .form{
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 1em;
+            }
+
+            .labels {
+                font-size: 1.2em;
+                margin-right: 1em;
+            }
+
+            .inputs {
+                font-size: 1.2em;
+                padding: 0.4em;
+            }
+
+            .container {
+                max-height: 100vh; 
+                overflow-y: auto; 
+                margin-top: 125px;
+                text-align: center;
+                background-color: white;
+                padding: 2em;
+                border-radius: 10px;
+            }
+            
+            .btn, .btn-secondary, .btn-primary, .btn-success {
+            display: inline-block;
+            margin: 1em;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            }
+
+            .btn-secondary {
+                background-color: #6c757d;
+            }
+            .btn:hover, .btn-secondary:hover, .btn-primary:hover, .btn-success:hover {
+                background-color: #0056b5; 
+            }
+
+            .h2 {
+                font-family: Arial, sans-serif; 
+                font-size: 18px; 
+            }
+            p {
+                font-family: Arial, sans-serif; 
+                font-size: 20px;
+            }
+        </style>
+    </head>
     <body>
         ";
-        // line 14
+        // line 73
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 15
+        // line 74
         yield "    </body>
 </html>
 ";
@@ -75,51 +127,7 @@ class __TwigTemplate_2201fb3facf7d656dacf26871294574f extends Template
         return; yield '';
     }
 
-    // line 5
-    public function block_title($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
-
-        yield "Welcome!";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        return; yield '';
-    }
-
-    // line 7
-    public function block_stylesheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 8
-        yield "        ";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        return; yield '';
-    }
-
-    // line 10
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 11
-        yield "        ";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        return; yield '';
-    }
-
-    // line 14
+    // line 73
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -143,9 +151,17 @@ class __TwigTemplate_2201fb3facf7d656dacf26871294574f extends Template
     /**
      * @codeCoverageIgnore
      */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
     public function getDebugInfo()
     {
-        return array (  123 => 14,  115 => 11,  108 => 10,  100 => 8,  93 => 7,  79 => 5,  69 => 15,  67 => 14,  63 => 12,  61 => 10,  58 => 9,  56 => 7,  51 => 5,  45 => 1,);
+        return array (  131 => 73,  121 => 74,  119 => 73,  53 => 10,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -153,19 +169,78 @@ class __TwigTemplate_2201fb3facf7d656dacf26871294574f extends Template
         return new Source("<!DOCTYPE html>
 <html>
     <head>
-        <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
-        {% block stylesheets %}
-        {% endblock %}
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-image: url('{{ asset('Imagenes/fondo.avif') }}');
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+            }
 
-        {% block javascripts %}
-        {% endblock %}
+            .form{
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 1em;
+            }
+
+            .labels {
+                font-size: 1.2em;
+                margin-right: 1em;
+            }
+
+            .inputs {
+                font-size: 1.2em;
+                padding: 0.4em;
+            }
+
+            .container {
+                max-height: 100vh; 
+                overflow-y: auto; 
+                margin-top: 125px;
+                text-align: center;
+                background-color: white;
+                padding: 2em;
+                border-radius: 10px;
+            }
+            
+            .btn, .btn-secondary, .btn-primary, .btn-success {
+            display: inline-block;
+            margin: 1em;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            }
+
+            .btn-secondary {
+                background-color: #6c757d;
+            }
+            .btn:hover, .btn-secondary:hover, .btn-primary:hover, .btn-success:hover {
+                background-color: #0056b5; 
+            }
+
+            .h2 {
+                font-family: Arial, sans-serif; 
+                font-size: 18px; 
+            }
+            p {
+                font-family: Arial, sans-serif; 
+                font-size: 20px;
+            }
+        </style>
     </head>
     <body>
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/base.html.twig");
+", "base.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/base.html.twig");
     }
 }

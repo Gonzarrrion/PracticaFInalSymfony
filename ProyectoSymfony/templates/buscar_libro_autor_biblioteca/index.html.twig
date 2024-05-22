@@ -3,26 +3,47 @@
 {% block title %}Buscar Libro por Autor y Biblioteca{% endblock %}
 
 {% block body %}
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+             
+li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+div {
+    margin-bottom: 1em;
+}
+.inputs{
+    margin-right: 20px;
+}
+</style>
+
+<div class="container">
 <h1>Buscar Libro por Autor y Biblioteca</h1>
 
-<form method="get" action="{{ path('buscar_libro_autor_biblioteca') }}">
-    <label for="autor">Autor:</label>
-    <input type="text" id="autor" name="autor" required>
+<form class="form" method="get" action="{{ path('buscar_libro_autor_biblioteca') }}">
+    <label class="labels" for="autor">Autor:</label>
+    <input class="inputs"type="text" id="autor" name="autor" required>
 
-    <label for="nombreBiblioteca">Biblioteca:</label>
-    <input type="text" id="nombreBiblioteca" name="nombreBiblioteca" required>
+    <label class="labels" for="nombreBiblioteca">Biblioteca:</label>
+    <input class="inputs" type="text" id="nombreBiblioteca" name="nombreBiblioteca" required>
 
-    <button type="submit">Buscar</button>
+    <button class="btn-primary btn" type="submit">Buscar</button>
 </form>
 
 {% if libros is defined %}
     <h2>Resultados:</h2>
     <ul>
         {% for libro in libros %}
-            <li>{{ libro.titulo }} por {{ libro.autor }} en {{ libro.biblioteca.nombre }}</li>
+            <li>Hay existencias de <b>{{ libro.titulo }}</b> escrito por <b>{{ libro.autor }}</b> en la biblioteca <b>{{ libro.biblioteca.nombre }}</b></li>
         {% else %}
             <li>No hay libros disponibles.</li>
         {% endfor %}
     </ul>
 {% endif %}
+</div>
 {% endblock %}

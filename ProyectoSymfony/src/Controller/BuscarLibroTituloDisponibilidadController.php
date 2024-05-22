@@ -57,7 +57,7 @@ class BuscarLibroTituloDisponibilidadController extends AbstractController
                         'num_ejemplares' => 0,
                     ];
                 }
-                $libros[$claveTitulo][$claveBiblioteca]['num_ejemplares']++;
+                $libros[$claveTitulo][$claveBiblioteca]['num_ejemplares'] += $libro->getNumEjemplares();
             }
         }
 

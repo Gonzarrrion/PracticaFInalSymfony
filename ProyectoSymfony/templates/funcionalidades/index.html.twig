@@ -3,8 +3,11 @@
 {% block title %}Funcionalidades{% endblock %}
 
 {% block body %}
+<div class="container">
 <h1>Funcionalidades</h1>
-
+{% for message in app.flashes('success') %}
+            <div class="alert alert-success">{{ message }}</div>
+{% endfor %}
 <div>
     <a href="{{ path('anadir_nuevo_libro') }}" class="btn btn-success">Añadir nuevo Libro</a>
     <a href="{{ path('insertar_biblioteca') }}" class="btn btn-success">Añadir nueva Biblioteca</a>
@@ -14,22 +17,20 @@
 
 
 <h2>Editar Libro</h2>
-<form action="{{ path('editar_libro', {'id': 'placeholder'}) }}" method="GET" onsubmit="return setAction(this, 'libro')">
-    <label for="libroId">ID del Libro:</label>
-    <input type="text" id="libroId" name="id" required>
+<form class="form" action="{{ path('editar_libro', {'id': 'placeholder'}) }}" method="GET" onsubmit="return setAction(this, 'libro')">
+    <label class="labels" for="libroId">ID del Libro:</label>
+    <input class="inputs" type="text" id="libroId" name="id" required>
     <button type="submit" class="btn btn-primary">Editar Libro</button>
 </form>
 
 
 
 <h2>Editar Biblioteca</h2>
-<form action="{{ path('editar_biblioteca', {'id': 'placeholder'}) }}" method="GET" onsubmit="return setAction(this, 'biblioteca')">
-    <label for="bibliotecaId">ID de la Biblioteca:</label>
-    <input type="text" id="bibliotecaId" name="id" required>
+<form class="form" action="{{ path('editar_biblioteca', {'id': 'placeholder'}) }}" method="GET" onsubmit="return setAction(this, 'biblioteca')">
+    <label class="labels" for="bibliotecaId">ID de la Biblioteca:</label>
+    <input class="inputs" type="text" id="bibliotecaId" name="id" required>
     <button type="submit" class="btn btn-primary">Editar Biblioteca</button>
 </form>
-
-
 
 {# para añadir el id que se buscara #}
 <script>
@@ -40,4 +41,5 @@ function setAction(form, type) {
 }
 </script>
 
+</div>
 {% endblock %}

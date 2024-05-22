@@ -1,15 +1,29 @@
-
 {% extends 'base.html.twig' %}
 
-{% block title %}Añadir Biblioteca{% endblock %}
+{% block title %}Añadir Nueva Biblioteca{% endblock %}
 
 {% block body %}
-    <h1>Añadir Biblioteca Nueva Biblioteca</h1>
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="container">
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <button class="btn btn-primary">Guardar</button>
+    <h1>Añadir un nueva Biblioteca</h1>
+
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+    {% for child in form %}
+            <div class="form-group">
+                <label class="labels">{{ form_label(child) }}</label>
+                <div class="inputs">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+            </div>
+        {% endfor %}
+    <button class="btn btn-primary">Guardar Biblioteca</button>
     {{ form_end(form) }}
-
-
+</div>
 {% endblock %}

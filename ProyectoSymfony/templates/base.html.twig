@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-image: url('{{ asset('Imagenes/fondo.avif') }}');
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+            }
 
-        {% block javascripts %}
-        {% endblock %}
+            .form{
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 1em;
+            }
+
+            .labels {
+                font-size: 1.2em;
+                margin-right: 1em;
+            }
+
+            .inputs {
+                font-size: 1.2em;
+                padding: 0.4em;
+            }
+
+            .container {
+                max-height: 100vh; 
+                overflow-y: auto; 
+                margin-top: 125px;
+                text-align: center;
+                background-color: white;
+                padding: 2em;
+                border-radius: 10px;
+            }
+            
+            .btn, .btn-secondary, .btn-primary, .btn-success {
+            display: inline-block;
+            margin: 1em;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            }
+
+            .btn-secondary {
+                background-color: #6c757d;
+            }
+            .btn:hover, .btn-secondary:hover, .btn-primary:hover, .btn-success:hover {
+                background-color: #0056b5; 
+            }
+
+            .h2 {
+                font-family: Arial, sans-serif; 
+                font-size: 18px; 
+            }
+            p {
+                font-family: Arial, sans-serif; 
+                font-size: 20px;
+            }
+        </style>
     </head>
     <body>
         {% block body %}{% endblock %}

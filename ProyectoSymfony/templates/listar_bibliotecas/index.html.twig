@@ -1,19 +1,42 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+             
+li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+div {
+    margin-bottom: 1em;
+}
+.inputs{
+    margin-right: 20px;
+}
+h2{
+    margin-top: 40px
+}
+</style>
 
+<div class="container">
 <h1>Listar Bibliotecas</h1>
 
 <ul>
     {% for biblioteca in bibliotecas %}
         <li>
             <h2>{{ biblioteca.nombre }}</h2>
-            <p>{{ biblioteca.direccion }}</p>
-            <form action="{{ path('borrar_biblioteca', {'id': biblioteca.id}) }}" method="post">
-                <button type="submit" class="btn btn-danger">Borrar</button>
+            <p><b>Direccion: </b>{{ biblioteca.direccion }}</p>
+            <form class="form" action="{{ path('borrar_biblioteca', {'id': biblioteca.id}) }}" method="post">
+                <button class="btn-primary btn"type="submit" class="btn btn-danger">Borrar</button>
             </form>
         </li>
     {% else %}
         <li>No hay bibliotecas disponibles.</li>
     {% endfor %}
 </ul>
+</div>
 {% endblock %}

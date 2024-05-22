@@ -3,26 +3,46 @@
 {% block title %}Buscar Libro por Editorial y Biblioteca{% endblock %}
 
 {% block body %}
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+             
+li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+div {
+    margin-bottom: 1em;
+}
+.inputs{
+    margin-right: 20px;
+}
+</style>
+<div class="container">
 <h1>Buscar Libro por Editorial y Biblioteca</h1>
 
-<form method="get" action="{{ path('buscar_libro_editorial_biblioteca') }}">
-    <label for="editorial">Editorial:</label>
-    <input type="text" id="editorial" name="editorial" required>
+<form class="form" method="get" action="{{ path('buscar_libro_editorial_biblioteca') }}">
+    <label class="labels" for="editorial">Editorial:</label>
+    <input class="inputs" type="text" id="editorial" name="editorial" required>
 
-    <label for="nombreBiblioteca">Biblioteca:</label>
-    <input type="text" id="nombreBiblioteca" name="nombreBiblioteca" required>
+    <label class="labels" for="nombreBiblioteca">Biblioteca:</label>
+    <input class="inputs" type="text" id="nombreBiblioteca" name="nombreBiblioteca" required>
 
-    <button type="submit">Buscar</button>
+    <button class="btn-primary btn" type="submit">Buscar</button>
 </form>
 
 {% if libros is defined %}
     <h2>Resultados:</h2>
     <ul>
         {% for libro in libros %}
-            <li>{{ libro.titulo }} por {{ libro.editorial }} en {{ libro.biblioteca.nombre }}</li>
+            <li>Hay existencias de <b>{{ libro.titulo }}</b> de la editorial <b>{{ libro.editorial }}</b> en la biblioteca <b>{{ libro.biblioteca.nombre }}</b></li>
         {% else %}
             <li>No hay libros disponibles.</li>
         {% endfor %}
     </ul>
 {% endif %}
+</div>
 {% endblock %}

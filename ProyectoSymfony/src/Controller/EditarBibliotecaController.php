@@ -20,7 +20,6 @@ class EditarBibliotecaController extends AbstractController
 
         if (!$biblioteca) {
             // Mostramos un mensaje de error 
-            $this->addFlash('error', 'La biblioteca no existe.');
             return $this->render('editar_biblioteca/index.html.twig');
         }
 
@@ -32,7 +31,7 @@ class EditarBibliotecaController extends AbstractController
             $this->addFlash('success', 'Biblioteca actualizada correctamente.');
 
             // para que no se añada 2 veces si recargas la pagina 
-            return $this->redirectToRoute('editar_biblioteca', ['id' => $biblioteca->getId()]);
+            return $this->redirectToRoute('funcionalidades');
         }
 
         return $this->render('editar_biblioteca/index.html.twig', [

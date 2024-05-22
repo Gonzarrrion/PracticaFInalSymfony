@@ -3,24 +3,50 @@
 {% block title %}Buscar Libro por Título{% endblock %}
 
 {% block body %}
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.container{
+    overflow-y: auto;
+}
+li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+div {
+    margin-bottom: 1em;
+}
+.inputs{
+    margin-right: 20px;
+}
+h2{
+    margin-top: 40px
+}
+</style>
+
+<div class="container">
     <h1>Buscar Libro por Título</h1>
 
-    <form action="{{ path('buscar_libro_titulo') }}" method="post">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required>
-        <button type="submit">Buscar</button>
+    <form class="form" action="{{ path('buscar_libro_titulo') }}" method="post">
+        <label class="labels" for="titulo">Título:</label>
+        <input class="inputs" type="text" id="titulo" name="titulo" required>
+        <button class="btn-primary btn" type="submit">Buscar</button>
     </form>
 
     <ul>
         {% for libro in libros %}
             <li>
                 <h2>{{ libro.titulo }}</h2>
-                <p>{{ libro.autor }}</p>
-                <p>{{ libro.isbn }}</p>
-                <p>{{ libro.biblioteca.nombre }}</p>
+                <p><b>Autor:</b> {{ libro.autor }}</p>
+                <p><b>ISBN:</b> {{ libro.isbn }}</p>
+                <p><b>Biblioteca:</b> {{ libro.biblioteca.nombre }}</p>
             </li>
         {% else %}
-            <li>No hay libros disponibles.</li>
+            <li><p>No hay libros disponibles.</p></li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}

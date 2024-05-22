@@ -3,9 +3,11 @@
 {% block title %}Página de Inicio{% endblock %}
 
 {% block body %}
-    <h1>Página de Inicio</h1>
-    <div>
-        <a href="{{ path('metodos_busqueda') }}" class="btn btn-primary">Métodos de Búsqueda</a>
-        <a href="{{ path('funcionalidades') }}" class="btn btn-secondary">Funcionalidades</a>
+    <div class="container">
+        <h1>Página de Inicio</h1>
+        <div>
+            <a href="{{ path('metodos_busqueda') }}" class="btn btn-primary">Métodos de Búsqueda</a>
+            <a href="{{ path('funcionalidades') }}" class="btn btn-secondary">Funcionalidades</a>
+        </div>
     </div>
 {% endblock %}

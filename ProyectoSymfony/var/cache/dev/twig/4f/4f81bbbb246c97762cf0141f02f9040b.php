@@ -72,16 +72,18 @@ class __TwigTemplate_a76405dee3a0e46d7887d4e4db423e85 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Página de Inicio</h1>
-    <div>
-        <a href=\"";
-        // line 8
+        yield "    <div class=\"container\">
+        <h1>Página de Inicio</h1>
+        <div>
+            <a href=\"";
+        // line 9
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("metodos_busqueda");
         yield "\" class=\"btn btn-primary\">Métodos de Búsqueda</a>
-        <a href=\"";
-        // line 9
+            <a href=\"";
+        // line 10
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("funcionalidades");
         yield "\" class=\"btn btn-secondary\">Funcionalidades</a>
+        </div>
     </div>
 ";
         
@@ -111,7 +113,7 @@ class __TwigTemplate_a76405dee3a0e46d7887d4e4db423e85 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  83 => 9,  79 => 8,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  84 => 10,  80 => 9,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -121,12 +123,13 @@ class __TwigTemplate_a76405dee3a0e46d7887d4e4db423e85 extends Template
 {% block title %}Página de Inicio{% endblock %}
 
 {% block body %}
-    <h1>Página de Inicio</h1>
-    <div>
-        <a href=\"{{ path('metodos_busqueda') }}\" class=\"btn btn-primary\">Métodos de Búsqueda</a>
-        <a href=\"{{ path('funcionalidades') }}\" class=\"btn btn-secondary\">Funcionalidades</a>
+    <div class=\"container\">
+        <h1>Página de Inicio</h1>
+        <div>
+            <a href=\"{{ path('metodos_busqueda') }}\" class=\"btn btn-primary\">Métodos de Búsqueda</a>
+            <a href=\"{{ path('funcionalidades') }}\" class=\"btn btn-secondary\">Funcionalidades</a>
+        </div>
     </div>
-{% endblock %}
-", "inicio/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/inicio/index.html.twig");
+{% endblock %}", "inicio/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/inicio/index.html.twig");
     }
 }

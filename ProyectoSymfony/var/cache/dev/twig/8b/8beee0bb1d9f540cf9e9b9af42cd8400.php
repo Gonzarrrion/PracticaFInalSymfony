@@ -33,7 +33,7 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
 
     protected function doGetParent(array $context)
     {
-        // line 2
+        // line 1
         return "base.html.twig";
     }
 
@@ -43,52 +43,80 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "insertar_biblioteca/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "insertar_biblioteca/index.html.twig", 2);
+        $this->parent = $this->loadTemplate("base.html.twig", "insertar_biblioteca/index.html.twig", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 4
+    // line 3
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Insertar Biblioteca";
+        yield "Añadir Nueva Biblioteca";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
         return; yield '';
     }
 
-    // line 6
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        yield "    <h1>Insertar Nueva Biblioteca</h1>
+        // line 6
+        yield "<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
+<div class=\"container\">
+
+    <h1>Añadir un nueva Biblioteca</h1>
 
     ";
-        // line 9
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
+        // line 19
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
         yield "
+    ";
+        // line 20
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
+            // line 21
+            yield "            <div class=\"form-group\">
+                <label class=\"labels\">";
+            // line 22
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'label');
+            yield "</label>
+                <div class=\"inputs\">";
+            // line 23
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["child"], 'widget', ["attr" => ["class" => "form-control"]]);
+            yield "</div>
+            </div>
         ";
-        // line 10
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'widget');
-        yield "
-        <button class=\"btn btn-primary\">Guardar</button>
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 26
+        yield "    <button class=\"btn btn-primary\">Guardar Biblioteca</button>
     ";
-        // line 12
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_end');
+        // line 27
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), 'form_end');
         yield "
-
-
+</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -117,26 +145,40 @@ class __TwigTemplate_3311ac0d60315e2acd8c247761b36852 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  88 => 12,  83 => 10,  79 => 9,  75 => 7,  68 => 6,  54 => 4,  37 => 2,);
+        return array (  117 => 27,  114 => 26,  105 => 23,  101 => 22,  98 => 21,  94 => 20,  90 => 19,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
-{% extends 'base.html.twig' %}
+        return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Insertar Biblioteca{% endblock %}
+{% block title %}Añadir Nueva Biblioteca{% endblock %}
 
 {% block body %}
-    <h1>Insertar Nueva Biblioteca</h1>
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>
+<div class=\"container\">
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <button class=\"btn btn-primary\">Guardar</button>
+    <h1>Añadir un nueva Biblioteca</h1>
+
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+    {% for child in form %}
+            <div class=\"form-group\">
+                <label class=\"labels\">{{ form_label(child) }}</label>
+                <div class=\"inputs\">{{ form_widget(child, {'attr': {'class': 'form-control'}}) }}</div>
+            </div>
+        {% endfor %}
+    <button class=\"btn btn-primary\">Guardar Biblioteca</button>
     {{ form_end(form) }}
-
-
+</div>
 {% endblock %}
-", "insertar_biblioteca/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/insertar_biblioteca/index.html.twig");
+", "insertar_biblioteca/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/insertar_biblioteca/index.html.twig");
     }
 }

@@ -3,23 +3,45 @@
 {% block title %} Buscar Biblioteca por Ciudad {% endblock %}
 
 {% block body %}
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+             
+li {
+    list-style-type: none;
+    padding: 0;
+}
+div {
+    margin-bottom: 1em;
+}
+</style>
+<div class="container">
     <h1>Buscar Biblioteca por Ciudad</h1>
 
-    <form action="{{ path('buscar_biblioteca_ciudad') }}" method="get">
-        <label for="ciudad">Ciudad:</label>
-        <input type="text" id="ciudad" name="ciudad" required>
-        <button type="submit">Buscar</button>
+    <form class="form" action="{{ path('buscar_biblioteca_ciudad') }}" method="get">
+        <label class="labels" for="ciudad">Ciudad:</label>
+        <input class="inputs" type="text" id="ciudad" name="ciudad" required>
+        <button class="btn-primary btn" type="submit">Buscar</button>
     </form>
 
     <ul>
         {% for biblioteca in bibliotecas %}
             <li>
+                <div>
                 <h2>{{ biblioteca.nombre }}</h2>
-                <p>{{ biblioteca.direccion }}</p>
-                <p>{{ biblioteca.ciudad }}</p>
+                <b><label class="labels"> Direccion:</label></b>
+                <span>{{ biblioteca.direccion }}</span>
+                </div>
+                <div>
+                <b><label class="labels"> Ciudad:</label></b>
+                <span>{{ biblioteca.ciudad }}</span>
+                </div>
             </li>
         {% else %}
             <li>No hay bibliotecas disponibles.</li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}

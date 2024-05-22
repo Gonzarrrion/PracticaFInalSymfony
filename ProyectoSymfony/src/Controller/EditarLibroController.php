@@ -20,7 +20,6 @@ class EditarLibroController extends AbstractController
         $libro = $libroRepository->find($id);
 
         if (!$libro) {
-            $this->addFlash('error', 'El libro no existe.');//para comprobar , se puede eliminar esto alfinal 
             return $this->render('editar_libro/index.html.twig');  // Modificar para no mostrar formulario
         }
 
@@ -29,10 +28,11 @@ class EditarLibroController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $entityManager->flush();
             $this->addFlash('success', 'Libro actualizado correctamente.');
 
-            return $this->redirectToRoute('editar_libro', ['id' => $libro->getId()]);  // evitar el que se cargue vrias veces 
+            return $this->redirectToRoute('funcionalidades');
         }
 
         return $this->render('editar_libro/index.html.twig', [

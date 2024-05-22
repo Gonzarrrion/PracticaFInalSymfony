@@ -75,56 +75,63 @@ class __TwigTemplate_75f17a31592c0adb83221c3423984f37 extends Template
         yield "
 
 <style>
+.container {
+    width: 80%;
+    margin-top: 50px;
+}
     .btn-container {
         display: flex;
-        flex-direction: column;
-        align-items: start; 
-        gap: 10px; 
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 20px;
     }
-
+    .btn-container .btn {
+        flex: 1 0 30%; 
+    }
 </style>
 
 
-
+<div class=\"container\">
 <h1>Métodos de Búsqueda</h1>
 <div class=\"btn-container\">
     <a href=\"";
-        // line 23
+        // line 29
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_biblioteca_ciudad");
         yield "\" class=\"btn btn-primary\">Buscar Biblioteca por Ciudad</a>
     <a href=\"";
-        // line 24
+        // line 30
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_biblioteca_nombre");
         yield "\" class=\"btn btn-primary\">Buscar Biblioteca por Nombre</a>
     <a href=\"";
-        // line 25
+        // line 31
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_autor_biblioteca");
         yield "\" class=\"btn btn-primary\">Buscar Libro por Autor en Biblioteca</a>
     <a href=\"";
-        // line 26
+        // line 32
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_editorial_biblioteca");
         yield "\" class=\"btn btn-primary\">Buscar Libro por Editorial en Biblioteca</a>
     <a href=\"";
-        // line 27
+        // line 33
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_titulo_biblioteca");
         yield "\" class=\"btn btn-primary\">Buscar Libro por Título en Biblioteca</a>
     <a href=\"";
-        // line 28
+        // line 34
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_titulo");
         yield "\" class=\"btn btn-primary\">Buscar Libro por Título</a>
     <a href=\"";
-        // line 29
+        // line 35
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buscar_libro_titulo_disponibilidad");
         yield "\" class=\"btn btn-primary\">Buscar Libro por Título y Disponibilidad</a>
     <a href=\"";
-        // line 30
+        // line 36
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listar_bibliotecas");
         yield "\" class=\"btn btn-info\">Listar Todas las Bibliotecas</a>
     <a href=\"";
-        // line 31
+        // line 37
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listar_libros_biblioteca");
         yield "\" class=\"btn btn-info\">Listar Libros en Biblioteca</a>
+</div>
 </div>
 ";
         
@@ -154,7 +161,7 @@ class __TwigTemplate_75f17a31592c0adb83221c3423984f37 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  126 => 31,  122 => 30,  118 => 29,  114 => 28,  110 => 27,  106 => 26,  102 => 25,  98 => 24,  94 => 23,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
+        return array (  132 => 37,  128 => 36,  124 => 35,  120 => 34,  116 => 33,  112 => 32,  108 => 31,  104 => 30,  100 => 29,  75 => 6,  68 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -167,18 +174,24 @@ class __TwigTemplate_75f17a31592c0adb83221c3423984f37 extends Template
 
 
 <style>
+.container {
+    width: 80%;
+    margin-top: 50px;
+}
     .btn-container {
         display: flex;
-        flex-direction: column;
-        align-items: start; 
-        gap: 10px; 
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 20px;
     }
-
+    .btn-container .btn {
+        flex: 1 0 30%; 
+    }
 </style>
 
 
-
+<div class=\"container\">
 <h1>Métodos de Búsqueda</h1>
 <div class=\"btn-container\">
     <a href=\"{{ path('buscar_biblioteca_ciudad') }}\" class=\"btn btn-primary\">Buscar Biblioteca por Ciudad</a>
@@ -191,7 +204,8 @@ class __TwigTemplate_75f17a31592c0adb83221c3423984f37 extends Template
     <a href=\"{{ path('listar_bibliotecas') }}\" class=\"btn btn-info\">Listar Todas las Bibliotecas</a>
     <a href=\"{{ path('listar_libros_biblioteca') }}\" class=\"btn btn-info\">Listar Libros en Biblioteca</a>
 </div>
+</div>
 {% endblock %}
-", "metodos_busqueda/index.html.twig", "/Users/administrador/Desktop/github/PracticaFinalSymfony/ProyectoSymfony/templates/metodos_busqueda/index.html.twig");
+", "metodos_busqueda/index.html.twig", "/Users/Gonzalo/Desktop/IngenieriaInformatica/CUARTO/SEGUNDO CUATRI/Arquitectura del Software/PracticaFinalSymfony/ProyectoSymfony/templates/metodos_busqueda/index.html.twig");
     }
 }
